@@ -2,7 +2,7 @@
    .bg_title{
    width: 100%;
    height: 100%;
-   background-image:url("wa_image.jpg");
+   background-image:url("/virtualtravel/pics/wa_image.jpg");
    background-size:cover ;
 }
   .content_title{
