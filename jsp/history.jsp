@@ -3,8 +3,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-31J">
 	<title>旅の履歴</title>
-		<link rel="stylesheet" href="history.css">
+		<link rel="stylesheet" href="<%=request.getContextPath() %>/css/history.css">
 		<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/56784c94a5.js" crossorigin="anonymous"></script>
 </head>

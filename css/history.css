@@ -20,7 +20,7 @@ transition: all 0.5s;
  line-height: 70px;
  background-color: darkgray;
  }
- 
+
 .sidebar ul a{
  /* display:block;*/
  height:100%;
@@ -31,7 +31,7 @@ transition: all 0.5s;
  padding-right: 30px;
  padding-left: 20px;
  }
- 
+
  #check{
      display: none;
  }
@@ -79,7 +79,7 @@ transition: all 0.5s;
  .bg{
      height:100%;
      width: 100%;
-     background-image: url("./wa_image.jpg");
+ 	 background-image:url("/virtualtravel/pics/wa_image.jpg");
      background-size:cover;
  }
  .content{
@@ -112,7 +112,7 @@ table th{
     padding: 10px 10px 10px 10px;
 }
 #okini{
-    
+
 }
 
 label #no{
