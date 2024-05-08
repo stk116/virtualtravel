@@ -1,0 +1,323 @@
+/* サイドバーの設定 */
+
+html, body {
+    overflow-x: hidden;
+}
+.header {                          /* ヘッダーの設定 */
+    width:100%;                    /* 横幅はコンテンツ分 */
+    height:3rem;                   /* ヘッダーの縦幅 */
+    position:fixed;                /* 要素の位置を画面の決まった位置に固定 */
+    z-index:99;                    /* 子孫要素との位置関係 */
+    top:0rem;                      /* ヘッダーの位置（画面上部からの距離） */
+    right:0rem;                    /* ヘッダーの位置（画面右端からの距離） */
+
+    background:deepskyblue;        /* ヘッダーの色 */
+    color:white;                   /* ヘッダー文字の色 */
+    display:flex;                  /* 直下の要素を並列にする */
+    justify-content:center;        /* 文字の左右中央寄せ */
+    align-items:center;            /* 文字の上下中央寄せ */
+
+    overflow:hidden;               /* 要素のボックスからはみ出た部分を隠す */
+}
+.header h1 {
+    font-size:3rem;                /* ヘッダーの文字の大きさ */
+    font-weight:bold;              /* 文字の太さを太くする */
+    line-height:normal;            /* 文字の行間を設定 */
+    margin:0;                      /* ブロックレベル要素自体を中央揃え */
+}
+
+.r_sidebar_button {                /* サイドバーボタンの設定 */
+    display:none;                  /* 指定した要素を非表示にする */
+}
+.r_sidebar_label {                 /* サイドバーラベルの設定 */
+    position:fixed;
+    top:0.5rem;                    /* サイドバーボタン（全体）の位置（画面上部からの距離） */
+    right:0.5rem;                  /* サイドバーボタン（全体）の位置（画面右端からの距離） */
+
+    width:4rem;                    /* サイドバーボタン（全体）の横幅 */
+    height:2rem;                   /* サイドバーボタン（全体）の縦幅 */
+    border-radius:2rem;            /* サイドバーボタン（全体）の角（丸みをもたせる） */
+    background:gray;               /* サイドバーボタンを押下する前のボタン背景の色 */
+
+    z-index:100;
+    cursor:pointer;                /* マウスポインターがサイドバーボタン上にあるときに、指矢印にする */
+    transition:0.2s;               /* サイドバーを開いたときのボタン（移動する円）の移動速度 */
+    box-shadow:0 4px 4px -2px #333 inset;
+}
+.r_sidebar_label:before {
+    content:"";                    /* HTMLにはない要素を作り出す */
+    position:absolute;             /* 要素の配置方法を指定（絶対配置） */
+    background:white;              /* サイドバーボタン（移動する円）の色 */
+    left:50%;                      /* サイドバーボタン（移動する円）の位置（全体から初期位置がどこか） */
+    width:2rem;                    /* サイドバーボタン（移動する円）の横幅 */
+    height:2rem;                   /* サイドバーボタン（移動する円）の縦幅 */
+    border-radius:2rem;            /* サイドバーボタン（移動する円）の角（丸みをもたせる） */
+    transition:0.2s;               /* サイドバーを閉じたときのボタン（移動する円）の移動速度 */
+    box-shadow:4px 0 4px -2px #333;
+}
+input[type="checkbox"]#r_sidebar:checked ~ .r_sidebar_label{
+    background:orange;             /* サイドバーを開いたときのボタン背景の色 */
+    transition:0.2s;
+}
+input[type="checkbox"]#r_sidebar:checked ~ .r_sidebar_label:before{
+    left:0;
+    transition:0.2s;
+}
+
+.r_sidebar_menu {
+    position:fixed;
+    top:3rem;              /* サイドバーの表示位置（ヘッダー分少し下げる） */
+    right:-335px;          /* サイドバーの表示位置（右端の画面外に隠す） */
+
+    height:calc( 100vh - 3rem);
+    width:300px;           /* サイドバーの横幅 */
+    padding:0.5rem 1rem;   /* サイドバーに表示する文字の上と左の余白 */
+    background:white;      /* サイドバー展開時の背景色 */
+    color:#333;            /* サイドバー展開時の文字の色（黒） */
+
+    transition:0.2s;
+    overflow:auto;         /* 要素のボックスからはみ出た部分はブラウザにより表示が変わる（基本的にはスクロールできる状態に） */
+    z-index:99;
+}
+input[type="checkbox"]#r_sidebar:checked ~ .r_sidebar_menu{
+    right:0;
+    box-shadow:-2px 0 4px #333;
+    transition:0.2s;
+}
+.r_sidebar_closer {
+    position:fixed;
+    top:3rem;
+    left:0;
+
+    height:calc(100vh - 3rem);
+    width:100%;
+    background:white;
+    opacity:0.6;
+    cursor:pointer;
+    z-index:98;
+
+    display:none;
+}
+input[type="checkbox"]#r_sidebar:checked ~ .r_sidebar_closer{
+    display:block;
+}
+main {
+   margin-top:3rem;
+}
+
+/* sp mode */
+@media (max-width:768px){
+    .header h1 {
+        font-size:1.5rem;
+        font-weight:bold;
+        line-height:normal;
+        margin:0;
+    }
+
+}
+
+
+/* ボタンの設定 */
+
+.button_solid006 a {
+    position: relative;
+    display: flex;                /* 子要素の位置を調整するCSS */
+    justify-content: center;      /* 左右中央寄せ */
+    align-items: center;          /* 上下中央寄せ */
+    margin: 250px auto;
+    max-width: 480px;
+    padding: 60px 75px;
+    background: #6bb6ff;
+    color: #FFF;
+    transition: 0.6s ease-in-out;
+    font-weight: 1200;
+    border-radius: 200px;
+    box-shadow: 0 5px 0px #4f96f6, 0 10px 100px #4f96f6;
+    text-decoration:none;
+}
+.button_solid006 a:hover{
+  background:#FF2F2F;
+  box-shadow: 0 5px 0px #B73434,0 7px 30px #FF2F2F;
+}
+
+.button_solid006 a:active{
+  background:#FF8282;
+  box-shadow: 0 0px 10px #FF8282;
+  box-shadow: 0 5px 0px #CC6262,0 4px 10px #FF8282;
+}
+
+
+/* 006 サンプルコード */
+ /*
+ .button_solid006 a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 6px 25px;
+    background: #6bb6ff;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    border-radius: 100px;
+    box-shadow: 0 5px 0px #4f96f6, 0 10px 100px #4f96f6;
+}
+.button_solid006 a:hover{
+  background:#FF2F2F;
+  box-shadow: 0 5px 0px #B73434,0 7px 30px #FF2F2F;
+}
+
+.button_solid006 a:active{
+  background:#FF8282;
+  box-shadow: 0 0px 10px #FF8282;
+  box-shadow: 0 5px 0px #CC6262,0 4px 10px #FF8282;
+}
+*/
+
+
+/* 背景画像の設定 */
+
+#sutart{
+width: 100vw;
+height: 100vh;
+position:fixed;
+top: 0;
+left: 0;
+z-index: -1;
+background-image:url("aki01.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
+animation:changeBackground 15s infinite;
+}
+
+@keyframes changeBackground{
+0%{background-image:url("aki01.jpg");}
+25%{background-image:url("aki02.jpg");}
+50%{background-image:url("aki03.jpg");}
+75%{background-image:url("wa_image.jpg");}
+100%{background-image:url("aki01.jpg");}
+}
+
+
+/* 背景画像の設定 */
+
+#kaisi{
+width: 100vw;
+height: 100vh;
+position:fixed;
+top: 0;
+left: 0;
+z-index: -1;
+background-image:url("kawa01.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
+animation:haikei 15s infinite;
+}
+
+@keyframes haikei{
+0%{background-image:url("kawa01.jpg");}
+25%{background-image:url("kawa02.jpg");}
+50%{background-image:url("kawa03.jpg");}
+75%{background-image:url("kawa04.jpg");}
+100%{background-image:url("kawa01.jpg");}
+}
+
+
+/* ツアー開始画面の枠 */
+.boxwrap{
+  margin:40px auto;
+  width:400px;
+  padding:20px 60px;
+  border:1px solid #ddd;
+  background-color: #efefef;
+}
+.wrap{
+     margin: auto;
+    width: 300px;
+    background-color: #7178a7;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+
+
+/* ツアー開始画面のボタンの設定 */
+
+.button0080 a {
+    background: #eee;
+    position:fixed;
+    top:20rem;                         /* 画面上部からの距離 */
+    right:1rem;                        /* 画面右端からの距離 */
+    display: flex;                     /* 子要素の位置を調整するCSS */
+    justify-content: space-around;     /* 横方向 */
+    align-items: center;               /* 上下中央寄せ */
+    margin: 0 auto;
+    height: 100px;
+    width:  200px;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    z-index:0;
+    text-decoration:none;
+}
+.button0080 a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    display: block;
+    background: #6bb6ff;
+    transition: .3s;
+    left:0;
+}
+.button0080 a:hover {
+    color: #FFF;
+}
+.button0080 a:hover:before {
+    width: 100%;
+    z-index: -1;
+}
+
+
+/* 008 サンプルコード
+.button008 a {
+    background: #eee;
+    position: relative;
+    display: flex;                     /* 子要素の位置を調整するCSS */
+    justify-content: space-around;     /* 横方向 */
+    align-items: center;               /* 上下中央寄せ */
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    z-index:0;
+}
+.button008 a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    display: block;
+    background: #6bb6ff;
+    transition: .3s;
+    left:0;
+}
+.button008 a:hover {
+    color: #FFF;
+}
+.button008 a:hover:before {
+    width: 100%;
+    z-index: -1;
+}
+*/
