@@ -28,7 +28,7 @@ position:fixed;
 top: 0;
 left: 0;
 z-index: -1;
-background-image:url("fireworks.jpg");
+background-image:url("/virtualtravel/pics/fireworks1.jpg");
 background-size:cover;
 background-repeat:no-repeat;
 background-position:center;
@@ -36,10 +36,10 @@ animation:changeBackgroundTekito 15s infinite;
 }
 
 @keyframes changeBackgroundTekito{
-0%{background-image:url("fireworks1.jpg");}
-33%{background-image:url("fireworks2.jpg");}
-66%{background-image:url("fireworks3.jpg");}
-100%{background-image:url("fireworks1.jpg");}
+0%{background-image:url("/virtualtravel/pics/fireworks1.jpg");}
+33%{background-image:url("/virtualtravel/pics/fireworks2.jpg");}
+66%{background-image:url("/virtualtravel/pics/fireworks3.jpg");}
+100%{background-image:url("virtualtravel/pics/fireworks1.jpg");}
 }
 
 
