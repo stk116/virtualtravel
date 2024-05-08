@@ -8,8 +8,8 @@
 		<link rel="stylesheet" href="<%=request.getContextPath() %>/css/title.css">
 </head>
 <body>
-<div class="bg_title">
-<div class="content_title">
+<div class="bg">
+<div class="content">
 <br>
 
 <div class="youkoso">
