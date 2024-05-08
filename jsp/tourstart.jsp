@@ -11,7 +11,7 @@
 
 <body>
 
-	<br><br>
+	<br><br><br><br>
 
 	<div class="boxwrap">
 
@@ -25,11 +25,7 @@
 		</div>
 	<br><br><br>
 	<h3 style="text-align:center">Have a nice trip</h3>
-
-
-	<br><br>
-
-
+	</div>
 
 </body>
 </html>
