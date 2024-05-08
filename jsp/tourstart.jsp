@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-31J">
 	<title>ツアー開始画面</title>
-	<link rel="stylesheet" href="http://localhost:8080/virtualtravel/css/style.css">
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css">
 </head>
 
 <body>
