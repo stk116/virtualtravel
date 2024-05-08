@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=windows-31j">
 <title>仮想トラベル</title>
 
-<link rel="stylesheet" href="<%=request.getContextPath() %>/style001.css">  <!--  CSSファイルのリンク -->
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/style001.css">  <!--  CSSファイルのリンク -->
 
 </head>
 <body>
@@ -15,15 +15,15 @@
   <div class="photo-container">
     <div class="photo-caption">
       <h2 style="text-align:left"><a href="<%=request.getContextPath() %>"></a></h2> <!-- 名所 -->
-      <img src="<a href="<%=request.getContextPath() %>"> width="1150" height="600">  <!-- 写真 -->
+      <img src="<a href="<%=request.getContextPath() %>" width="1150" height="600">  <!-- 写真 -->
     </div>
     <div class="button008">
-	<a href="<%=request.getContextPath() %>">次の場所へ</a>  <!-- ページ遷移 ツアー３ -->
+	<a href="<%=request.getContextPath() %>/jsp/t_screen3.jsp">次の場所へ</a>  <!-- ページ遷移 ツアー３ -->
 
 </div>
 	 </div>
     <div class="button009">
-	<a href="<%=request.getContextPath() %>">前の場所へ</a>  <!-- ページ遷移 ツアー1-->
+	<a href="<%=request.getContextPath() %>/jsp/t_screen1.jsp">前の場所へ</a>  <!-- ページ遷移 ツアー1-->
 </div>
 
     <p class="address"><a href="<%=request.getContextPath() %>"></a></p> <!-- 住所 -->

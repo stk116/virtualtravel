@@ -18,12 +18,12 @@
       <img src="<%=request.getContextPath() %>">"width="1150" height="600">  <!-- 写真 -->
     </div>
     <div class="button008">
-	<a href="<%=request.getContextPath() %>">次へ</a>  <!-- ページ遷移 続ける/やめる-->
+	<a href="<%=request.getContextPath() %>/">次へ</a>  <!-- ページ遷移 続ける/やめる-->
 </div>
 
 </div>
     <div class="button009">
-	<a href="<%=request.getContextPath() %>">前の場所へ</a>  <!-- ページ遷移 ツアー２-->
+	<a href="<%=request.getContextPath() %>/jsp/t_screen2.jsp">前の場所へ</a>  <!-- ページ遷移 ツアー２-->
 </div>
 
     <p class="address"><a href="<%=request.getContextPath() %>"></a></p> <!-- 住所 -->
