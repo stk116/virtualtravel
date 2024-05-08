@@ -3,12 +3,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-31J">
 	<title>タイトル画面</title>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="<%=request.getContextPath() %>/css/title.css">
 </head>
 <body>
-<div class="bg">
-<div class="content">
+<div class="bg_title">
+<div class="content_title">
 <br>
 
 <div class="youkoso">

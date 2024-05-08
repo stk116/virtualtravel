@@ -1,0 +1,124 @@
+
+   .bg_title{
+   width: 100%;
+   height: 100%;
+   background-image:url("wa_image.jpg");
+   background-size:cover ;
+}
+  .content_title{
+  height:100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .youkoso{
+  font-family: 'HG正楷書体-PRO', serif;
+  font-size: 35px;
+  margin-top:100px;
+  margin-left:40px;
+  text-decoration: none;
+}
+
+  .syuppatsu{
+  font-family: 'HG正楷書体-PRO', serif;
+  font-size: 25px;
+  margin-left:40px;
+  text-decoration: none;
+}
+/*  .syuppatsu_bg{
+    background-color:rgba(255,221,255,0.5);
+    }*/
+
+    .text{
+    font-size: 20px;
+    margin-left:40px;
+    margin-right:300px;
+    background-color: rgba(250,235,215,0.5);
+    }
+
+
+
+
+
+/* 001 */
+.login_btn a {
+    background: #eee;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 280px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    text-decoration: none;
+}
+.login_btn a:hover {
+    background: #3399CC;
+    color: #FFF;
+}
+.login_btn a:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #313131;
+    border-right: 3px solid #313131;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+.login_btn a:hover:after {
+    border-color: #FFF;
+}
+
+
+    .touroku_btn a {
+    background: #eee;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 280px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    text-decoration: none;
+}
+    .touroku_btn a:hover {
+    background: #3399CC;
+    color: #FFF;
+}
+    .touroku_btn a:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #313131;
+    border-right: 3px solid #313131;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+    .touroku_btn a:hover:after {
+    border-color: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
