@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-31J">
 	<title>ツアー開始画面</title>
-	<link rel="stylesheet" href="<%=request.getContextPath() %>/style.css">
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
 	<br><br>
 	<h3 style="text-align:center">一言コメント</h3>
 		<div class="button0080">
-			<h1><a href="<%=request.getContextPath() %>">次へ→</a></h1>
+			<h1><a href="<%=request.getContextPath() %>/jsp/t_screen1.jsp">次へ→</a></h1>
 		</div>
 	<br><br><br>
 	<h3 style="text-align:center">Have a nice trip</h3>

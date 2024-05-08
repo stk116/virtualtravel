@@ -9,7 +9,7 @@
 
 	<title>スタートページ</title>
 
-	<link rel="stylesheet" href="<%=request.getContextPath() %>/style.css">
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css">
 
 </head>
 
@@ -35,7 +35,7 @@
 
 
 	<div class="button_solid006">
-		<h1><a href="<%=request.getContextPath() %>/tourstart">今日の旅へ</a></h1>
+		<h1><a href="<%=request.getContextPath() %>/jsp/tourstart.jsp">今日の旅へ</a></h1>
 	</div>
 
 
