@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=windows-31j">
 <title>会員登録完了ページ</title>
 
-<link rel="stylesheet" href="<%=request.getContextPath() %>/CSS/Signupteststyle.css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/Signupteststyle.css">
 </head>
 <body>
 <h2>会員登録完了画面</h2>

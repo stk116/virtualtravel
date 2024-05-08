@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=windows-31j">
 <title>新規会員登録画面</title>
 </head>
-<link rel="stylesheet" href="<%=request.getContextPath() %>/CSS/Signupteststyle.css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/Signupteststyle.css">
 <body>
 <h2>新規会員登録画面</h2>
 <div id="wrapper"></div>
