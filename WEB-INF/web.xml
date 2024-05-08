@@ -7,12 +7,12 @@
 
 
     <servlet>
-        <servlet-name>startS</servlet-name>
-        <servlet-class>jsp.StarttServlet</servlet-class>
+        <servlet-name>○○</servlet-name>
+        <servlet-class>パッケージ名.サーブレット名</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>startS</servlet-name>
-        <url-pattern>/start</url-pattern>
+        <servlet-name>○○</servlet-name>
+        <url-pattern>/〇〇</url-pattern>
     </servlet-mapping>
 
 </web-app>
