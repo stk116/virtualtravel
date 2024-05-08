@@ -21,7 +21,7 @@
 	<br><br>
 	<h3 style="text-align:center">ˆêŒ¾ƒRƒƒ“ƒg</h3>
 		<div class="button0080">
-			<h1><a href="<%=request.getContextPath() %>">Ÿ‚Ö¨</a></h1>
+			<h1><a href="<%=request.getContextPath() %>/jsp/t_screen1.jsp">Ÿ‚Ö¨</a></h1>
 		</div>
 	<br><br><br>
 	<h3 style="text-align:center">Have a nice trip</h3>
