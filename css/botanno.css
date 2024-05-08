@@ -1,0 +1,93 @@
+
+/* ボタンの設定 */
+
+.tugihebutton a {
+    position:absolute;
+    justify-content: center;
+    top:10rem;                         /* 画面上部からの距離 */
+    left:20rem;
+    display: flex;                     /* 子要素の位置を調整するCSS */
+    justify-content: center;           /* 横方向 */
+    align-items: center;               /* 上下中央寄せ */
+    margin: 0 auto;
+    height: 100px;
+    width:  400px;
+    max-width: 440px;
+    padding: 6px 25px;
+    background: #6bb6ff;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    border-radius: 100px;
+    box-shadow: 0 5px 0px #4f96f6, 0 10px 100px #4f96f6;
+    text-decoration:none;
+}
+.tugihebutton a:hover{
+  background:#FF2F2F;
+  box-shadow: 0 5px 0px #B73434,0 7px 30px #FF2F2F;
+}
+
+.tugihebutton a:active{
+  background:#FF8282;
+  box-shadow: 0 0px 10px #FF8282;
+  box-shadow: 0 5px 0px #CC6262,0 4px 10px #FF8282;
+}
+
+
+.owaributton a {
+    position:absolute;
+    justify-content: center;
+    top:30rem;                         /* 画面上部からの距離 */
+    right:20rem;
+    display: flex;                     /* 子要素の位置を調整するCSS */
+    justify-content: center;           /* 横方向 */
+    align-items: center;               /* 上下中央寄せ */
+    margin: 0 auto;
+    height: 100px;
+    width:  400px;
+    max-width: 440px;
+    padding: 6px 25px;
+    background: #6bb6ff;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    border-radius: 100px;
+    box-shadow: 0 5px 0px #4f96f6, 0 10px 100px #4f96f6;
+    text-decoration:none;
+}
+.owaributton a:hover{
+  background:#FF2F2F;
+  box-shadow: 0 5px 0px #B73434,0 7px 30px #FF2F2F;
+}
+
+.owaributton a:active{
+  background:#FF8282;
+  box-shadow: 0 0px 10px #FF8282;
+  box-shadow: 0 5px 0px #CC6262,0 4px 10px #FF8282;
+}
+
+/* 背景画像の設定 */
+
+#syuuryou{
+width: 100vw;
+height: 100vh;
+position:fixed;
+top: 0;
+left: 0;
+z-index: -1;
+background-image:url("/virtualtravel/pics/aki01.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
+animation:gazou 15s infinite;
+}
+
+@keyframes gazou{
+0%{background-image:url("/virtualtravel/pics/aki01.jpg");}
+25%{background-image:url("/virtualtravel/pics/aki02.jpg");}
+50%{background-image:url("/virtualtravel/pics/aki03.jpg");}
+75%{background-image:url("/virtualtravel/pics/wa_image.jpg");}
+100%{background-image:url("/virtualtravel/pics/aki01.jpg");}
+}
+
+}
