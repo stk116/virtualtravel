@@ -5,7 +5,7 @@ position:fixed;
 top: 0;
 left: 0;
 z-index: -1;
-background-image:url("../pics/wa_image.jpg");
+background-image:url("/pics/wa_image.jpg");
 background-size:cover;
 background-repeat:no-repeat;
 background-position:center;
@@ -13,11 +13,11 @@ animation:changeBackground 15s infinite;
 }
 
 @keyframes changeBackground{
-0%{background-image:url("../pics/wa_image.jpg");}
-25%{background-image:url("../pics/wa_image2.jpg");}
-50%{background-image:url("../pics/wa_image3.jpg");}
-75%{background-image:url("../pics/wa_image4.jpg");}
-100%{background-image:url("../pics/wa_image.jpg");}
+0%{background-image:url("/pics/wa_image.jpg");}
+25%{background-image:url("/pics/wa_image2.jpg");}
+50%{background-image:url("/pics/wa_image3.jpg");}
+75%{background-image:url("/pics/wa_image4.jpg");}
+100%{background-image:url("/pics/wa_image.jpg");}
 }
 
 
