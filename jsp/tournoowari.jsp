@@ -8,7 +8,7 @@
 
 	<title>ツアー継続・終了画面</title>
 
-	<link rel="stylesheet" href="botanno.css">
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/css/botanno.css">
 </head>
 
 <body>
