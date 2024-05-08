@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=windows-31j">
 <title>仮想トラベル</title>
 
-<link rel="stylesheet" href="<%=request.getContextPath() %>/style001.css">  <!--  CSSファイルのリンク -->
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/style001.css">  <!--  CSSファイルのリンク -->
 
 
 </head>
@@ -15,7 +15,7 @@
 <div class="photo-container">
     <div class="photo-caption">
       <h2 style="text-align:left"><a href="<%=request.getContextPath() %>"></a></h2> <!-- 名所 -->
-      <img src="<%=request.getContextPath() %>">" width="1150" height="600">  <!-- 写真 -->
+      <img src="<%=request.getContextPath() %>">"width="1150" height="600">  <!-- 写真 -->
     </div>
     <div class="button008">
 	<a href="<%=request.getContextPath() %>">次へ</a>  <!-- ページ遷移 続ける/やめる-->
