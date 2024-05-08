@@ -15,7 +15,7 @@
   <div class="photo-container">
     <div class="photo-caption">
       <h2 style="text-align:left"><a href="<%=request.getContextPath() %>"></a></h2> <!-- 名所 -->
-      <img src="<a href="<%=request.getContextPath() %>" width="1150" height="600">  <!-- 写真 -->
+      <img src="<a href="<%=request.getContextPath() %>"> width="1150" height="600">  <!-- 写真 -->
     </div>
     <div class="button008">
 	<a href="<%=request.getContextPath() %>/jsp/t_screen3.jsp">次の場所へ</a>  <!-- ページ遷移 ツアー３ -->
