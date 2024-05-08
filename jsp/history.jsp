@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=windows-31j"
     pageEncoding="windows-31j"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<html lang="ja">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-31J">
 	<title>旅の履歴</title>
@@ -20,9 +20,9 @@
 		<header>　　　　がログイン中</header>
 		<ul>
 		  <li>
-				<li><a href="#">スタートページ</a></li>
+				<li><a href="start.jsp">スタートページ</a></li>
 
-				<li><a href="#">ログアウト</a></li>
+				<li><a href="title.jsp">ログアウト</a></li>
 		  </li>
 		</ul>
 	</div>
