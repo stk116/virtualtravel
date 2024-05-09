@@ -19,7 +19,7 @@
 	<header>
 
         <div class="header">
-            <h3>‚æ‚¤‚±‚»<%=request.getAttribute("username") %>‚³‚ñ</h3>
+            <h3>‚æ‚¤‚±‚»<%=session.getAttribute("username") %>‚³‚ñ</h3>
         </div>
         <input id="r_sidebar" class="r_sidebar_button" type="checkbox">
         <label class="r_sidebar_label" for="r_sidebar"></label>
