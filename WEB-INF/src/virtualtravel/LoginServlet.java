@@ -21,7 +21,7 @@ public class LoginServlet extends HttpServlet{
 				int updateCount = TravelerDAOIL.search(tbean);
 
 				if (updateCount >= 1) {
-					forwardURL = "/jsp/loginsuccess.jsp";
+					forwardURL = "/jsp/start.jsp";
 				}else {
 					forwardURL = "/jsp/loginerror.jsp";
 				}
