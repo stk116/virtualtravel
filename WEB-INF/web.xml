@@ -24,4 +24,13 @@
         <url-pattern>/regist</url-pattern>
     </servlet-mapping>
 
+     <servlet>
+        <servlet-name>loginS</servlet-name>
+        <servlet-class>virtualtravel.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginS</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
 </web-app>
