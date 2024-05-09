@@ -15,7 +15,7 @@
   <div class="success-top">
     <p class="success-message">会員登録が完了しました！</p>
   </div>
-  <a class="login-button_1" href="<%=request.getContextPath() %>test%20.html">ログイン画面へ</a>
+  <a class="login-button_1" href="<%=request.getContextPath() %>/jsp/login.jsp">ログイン画面へ</a>
 </div>
 </body>
 </html>
