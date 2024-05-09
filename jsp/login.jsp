@@ -11,7 +11,7 @@
 <h2>ログイン画面</h2>
 <div id="wrapper"></div>
 <div class="login_container">
-      <form action="<%=request.getContextPath() %>/login">
+      <form action="<%=request.getContextPath() %>/login" method="POST">
         <p class="fsize">ログイン画面</p>
         <input type="text" name="username" placeholder="Username" />
         <input type="password" name="pass" placeholder="Password" />
