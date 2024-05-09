@@ -13,8 +13,8 @@
 <div class="signup_container">
       <form action="<%=request.getContextPath() %>/regist" method="POST">
         <p class="fsize">V‹K‰ïˆõ“o˜^‰æ–Ê</p>
-        <input type="text" placeholder="Username" />
-        <input type="password" placeholder="Password" />
+        <input type="text" name="username" placeholder="Username" />
+        <input type="password" name="pass"placeholder="Password" />
         <button type="submit">“o˜^</button>
       </form>
 </div>

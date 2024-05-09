@@ -1,4 +1,5 @@
 package virtualtravel;
+
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -6,7 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-public class RegistServlet extends HttpServlet{
+public class LoginServlet extends HttpServlet{
 	public void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException{
 			request.setCharacterEncoding("Windows-31J");
@@ -17,22 +18,23 @@ public class RegistServlet extends HttpServlet{
 			String forwardURL = null;
 			try {
 				TravelerBeanIL tbean = new TravelerBeanIL(username, pass);
-				int updateCount = TravelerDAOIL.insert(tbean);
+				int updateCount = TravelerDAOIL.search(tbean);
 
-				if (updateCount < 1) {
-					forwardURL = "/jsp/registerror.jsp";
+				if (updateCount >= 1) {
+					forwardURL = "/jsp/start.jsp";
 				}else {
-					forwardURL = "/jsp/registsuccess.jsp";
+					forwardURL = "/jsp/loginerror.jsp";
 				}
 			}catch (NumberFormatException e) {
 				e.printStackTrace();
-				forwardURL = "/jsp/registerror.jsp";
+				forwardURL = "/jsp/loginerror.jsp";
 			}catch (SQLException e) {
 				e.printStackTrace();
-				forwardURL = "/jsp/registerror.jsp";
+				forwardURL = "/jsp/loginerror.jsp";
 			}
 
 			request.getRequestDispatcher(forwardURL).forward(request,response);
 
-	}
+
+}
 }
