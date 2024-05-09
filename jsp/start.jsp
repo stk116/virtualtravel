@@ -26,8 +26,8 @@
 
         <div class="r_sidebar_menu">
             　さんがログイン中<br>
-            <a href="<%=request.getContextPath() %>">旅の履歴</a><br>
-            <a href="<%=request.getContextPath() %>">ログアウト</a><br>
+            <a href="<%=request.getContextPath() %>/jsp/history.jsp">旅の履歴</a><br>
+            <a href="<%=request.getContextPath() %>/jsp/title.jsp">ログアウト</a><br>
         </div>
         <div id="r_sidebar_closer" class="r_sidebar_closer"></div>
     </header>
