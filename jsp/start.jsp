@@ -19,7 +19,7 @@
 	<header>
 
         <div class="header">
-            <h3>ÇÊÇ§Ç±ÇªÅ@Ç≥ÇÒ</h3>
+            <h3>ÇÊÇ§Ç±Çª<%=request.getAttribute("username") %>Ç≥ÇÒ</h3>
         </div>
         <input id="r_sidebar" class="r_sidebar_button" type="checkbox">
         <label class="r_sidebar_label" for="r_sidebar"></label>
