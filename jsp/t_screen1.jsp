@@ -11,19 +11,22 @@
 </head>
 <body>
 
-  <div class="photo-container">
+   <div class="photo-container">
     <div class="photo-caption">
-      <h2 style="text-align:left"><a href="<%=request.getContextPath() %>"></a></h2>		<!-- 名所 -->
-      <img src="<a href="<%=request.getContextPath() %>"> width="1150" height="600">   <!--　写真  -->
+      <h2 style="text-align:left">  </h2>	<!-- 名所 -->
+
+
+    <img src= " /virtualtravel/pics/fireworks1.jpg" width="1150" height="600">  <!-- 写真 -->
+
     </div>
     <div class="button008">
         <a href="<%=request.getContextPath() %>/jsp/t_screen2.jsp">次の場所へ</a>  <!-- 次のページのリンク　ツアー2 -->
     </div>
-    <p class="address"><a href="<%=request.getContextPath() %>"></a> </p>  <!-- 住所 -->
-    <p><a href="<%=request.getContextPath() %>"></a></p>  <!-- 説明　 -->
+    <p class="address">   </p>  <!-- 住所 -->
+    <p>  </p>  <!-- 説明　 -->
     <br><br>
-    参照先：<a href="<%=request.getContextPath() %>"> </a> <!-- 参照 -->
-  </div>
+    参照先：  <!-- 参照 -->
+   </div>
 
 
 </body>

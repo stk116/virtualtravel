@@ -14,8 +14,10 @@
 
   <div class="photo-container">
     <div class="photo-caption">
-      <h2 style="text-align:left"><a href="<%=request.getContextPath() %>"></a></h2> <!-- 名所 -->
-      <img src="<a href="<%=request.getContextPath() %>"> width="1150" height="600">  <!-- 写真 -->
+      <h2 style="text-align:left">  </h2> <!-- 名所 -->
+
+   <img src= " /virtualtravel/pics/fireworks2.jpg"  width="1150" height="600">  <!-- 写真 -->
+
     </div>
     <div class="button008">
 	<a href="<%=request.getContextPath() %>/jsp/t_screen3.jsp">次の場所へ</a>  <!-- ページ遷移 ツアー３ -->
@@ -26,11 +28,11 @@
 	<a href="<%=request.getContextPath() %>/jsp/t_screen1.jsp">前の場所へ</a>  <!-- ページ遷移 ツアー1-->
 </div>
 
-    <p class="address"><a href="<%=request.getContextPath() %>"></a></p> <!-- 住所 -->
-    <p><a href="<%=request.getContextPath() %>"></a></p>  <!-- 説明 -->
+    <p class="address">  </p> <!-- 住所 -->
+    <p>  </p>  <!-- 説明 -->
 
     <br><br>
-    参照先：<a href="<%=request.getContextPath() %>"></a> <!-- 参照 -->
+    参照先：  <!-- 参照 -->
 
 
 
