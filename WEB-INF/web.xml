@@ -15,4 +15,13 @@
         <url-pattern>/〇〇</url-pattern>
     </servlet-mapping>
 
+        <servlet>
+        <servlet-name>registS</servlet-name>
+        <servlet-class>virtualtravel.RegistServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registS</servlet-name>
+        <url-pattern>/regist</url-pattern>
+    </servlet-mapping>
+
 </web-app>
