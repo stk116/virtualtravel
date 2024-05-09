@@ -1,0 +1,9 @@
+drop table if exists t_history CASCADE;
+
+CREATE TABLE t_history
+(USERNAME  VARCHAR(8) CONSTRAINT PK_USERNAME PRIMARY KEY,
+ HIS  VARCHAR(50),
+ DATE  VARCHAR(12));
+
+INSERT INTO t_history VALUES('testMan', 'ç˜ÉcÉAÅ[', CURRENT_DATE);
+

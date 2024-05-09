@@ -11,7 +11,7 @@
 <h2>V‹K‰ïˆõ“o˜^‰æ–Ê</h2>
 <div id="wrapper"></div>
 <div class="signup_container">
-      <form action="<%=request.getContextPath() %>/Signupsuccesstest.html">
+      <form action="<%=request.getContextPath() %>/regist" method="POST">
         <p class="fsize">V‹K‰ïˆõ“o˜^‰æ–Ê</p>
         <input type="text" placeholder="Username" />
         <input type="password" placeholder="Password" />
