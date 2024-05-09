@@ -26,10 +26,10 @@ public class RegistServlet extends HttpServlet{
 				}
 			}catch (NumberFormatException e) {
 				e.printStackTrace();
-				forwardURL = "/database/registerror.jsp";
+				forwardURL = "/jsp/registerror.jsp";
 			}catch (SQLException e) {
 				e.printStackTrace();
-				forwardURL = "/database/registerror.jsp";
+				forwardURL = "/jsp/registerror.jsp";
 			}
 
 			request.getRequestDispatcher(forwardURL).forward(request,response);
