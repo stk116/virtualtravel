@@ -17,7 +17,9 @@
 	</label>
 
 	<div class="sidebar">
-		<header> <%=session.getAttribute("username") %>がログイン中</header>
+		<header> <%=session.getAttribute("username") %><br>
+		がログイン中</header>
+
 		<ul>
 		  <li>
 				<li><a href="start.jsp">スタートページ</a></li>
