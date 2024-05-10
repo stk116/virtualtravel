@@ -17,9 +17,9 @@
 
 	<div id="kaisi"></div>
 
-	<h1 style="text-align:center">今回は  旅行</h1>
+	<h1 style="text-align:center">今回は <%=request.getAttribute("tour") %>旅行</h1>
 	<br><br>
-	<h3 style="text-align:center">一言コメント</h3>
+	<h3 style="text-align:center"><%=request.getAttribute("explane") %></h3>
 		<div class="button0080">
 			<h1><a href="<%=request.getContextPath() %>/jsp/t_screen1.jsp">次へ→</a></h1>
 		</div>

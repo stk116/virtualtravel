@@ -33,4 +33,13 @@
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
 
+     <servlet>
+        <servlet-name>tourS</servlet-name>
+        <servlet-class>virtualtravel.TourServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>tourS</servlet-name>
+        <url-pattern>/tour</url-pattern>
+    </servlet-mapping>
+
 </web-app>
