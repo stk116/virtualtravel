@@ -13,19 +13,19 @@
 
    <div class="photo-container">
     <div class="photo-caption">
-      <h2 style="text-align:left">  </h2>	<!-- 名所 -->
+      <h2 style="text-align:left"><%=request.getAttribute("name") %></h2>	<!-- 名所 -->
 
 
-    <img src= " /virtualtravel/pics/fireworks1.jpg" width="1150" height="600">  <!-- 写真 -->
+    <img src= " <%=request.getAttribute("pic") %>" width="1150" height="600">  <!-- 写真 -->
 
     </div>
     <div class="button008">
-        <a href="<%=request.getContextPath() %>/jsp/t_screen2.jsp">次の場所へ</a>  <!-- 次のページのリンク　ツアー2 -->
+        <a href="<%=request.getContextPath() %>/screen2">次の場所へ</a>  <!-- 次のページのリンク　ツアー2 -->
     </div>
-    <p class="address">   </p>  <!-- 住所 -->
-    <p>  </p>  <!-- 説明　 -->
+    <p class="address"> <%=request.getAttribute("place") %></p>  <!-- 住所 -->
+    <p>  <%=request.getAttribute("text") %> </p>  <!-- 説明　 -->
     <br><br>
-    参照先：  <!-- 参照 -->
+    参照先： <%=request.getAttribute("link") %><!-- 参照 -->
    </div>
 
 

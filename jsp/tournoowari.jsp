@@ -17,7 +17,7 @@
 	<br><br>
 
 	<div class="tugihebutton">
-		<h1><a href="<%=request.getContextPath() %>/jsp/start.jsp">ŽŸ‚Ì—·‚Ö ¨</a></h1>
+		<h1><a href="<%=request.getContextPath() %>/tour">ŽŸ‚Ì—·‚Ö ¨</a></h1>
 	</div>
 
 	<div class="owaributton">

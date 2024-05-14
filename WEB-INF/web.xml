@@ -42,4 +42,33 @@
         <url-pattern>/tour</url-pattern>
     </servlet-mapping>
 
+         <servlet>
+        <servlet-name>screen1S</servlet-name>
+        <servlet-class>virtualtravel.Screen1Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>screen1S</servlet-name>
+        <url-pattern>/screen1</url-pattern>
+    </servlet-mapping>
+
+             <servlet>
+        <servlet-name>screen2S</servlet-name>
+        <servlet-class>virtualtravel.Screen2Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>screen2S</servlet-name>
+        <url-pattern>/screen2</url-pattern>
+    </servlet-mapping>
+
+             <servlet>
+        <servlet-name>screen3S</servlet-name>
+        <servlet-class>virtualtravel.Screen3Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>screen3S</servlet-name>
+        <url-pattern>/screen3</url-pattern>
+    </servlet-mapping>
+
+
+
 </web-app>
