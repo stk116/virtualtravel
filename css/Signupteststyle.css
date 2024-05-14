@@ -289,8 +289,8 @@ button:hover:after{
 
 .error-container {
     width: 800px;
-    height:300px;
-    margin: 150px auto;
+    height:400px;
+    margin: 130px auto;
     border: 2px solid #000;
     display: flex;
     flex-direction: column;
@@ -301,7 +301,7 @@ button:hover:after{
 
   .error-top {
     width: 100%;
-    height:37%;
+    height:45%;
     background-color: #ff0000;
     padding: 20px 0;
     text-align: center;
@@ -311,7 +311,16 @@ button:hover:after{
     color: #fff;
     font-size: 60px;
     position: relative;
-    margin-top:20px;
+    margin-top:10px;
+    margin-bottom:0;
+}
+
+.error-messageLogin{
+	color:#fff;
+	font-size:20px;
+	position:relative;
+	margin-top:20px;
+	margin-bottom:0;
 }
 
 
@@ -361,8 +370,8 @@ button:hover:after{
 
 .SUE-container {
     width: 800px;
-    height:300px;
-    margin: 150px auto;
+    height:400px;
+    margin: 100px auto;
     border: 2px solid #000;
     display: flex;
     flex-direction: column;
@@ -373,7 +382,7 @@ button:hover:after{
 
   .SUE-top {
     width: 100%;
-    height:auto;
+    height:40%;
     background-color: #ff0000;
     padding: 20px 0;
     text-align: center;
@@ -393,6 +402,11 @@ button:hover:after{
 	margin:2px;
 	}
 
+.SUE-message3{
+	color: #fff;
+	font-size: 20px;
+	margin:3px;
+	}
 
   .login-button {
     background: #eee;

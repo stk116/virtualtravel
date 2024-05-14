@@ -26,6 +26,7 @@ public class LoginServlet extends HttpServlet{
 					session.setAttribute("username",username);
 					forwardURL = "/jsp/start.jsp";
 				}else {
+					request.setAttribute("errorMessageLogin", "ユーザー名かパスワードが違います");
 					forwardURL = "/jsp/loginerror.jsp";
 				}
 			}catch (NumberFormatException e) {
