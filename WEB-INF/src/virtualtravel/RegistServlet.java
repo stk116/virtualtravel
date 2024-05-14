@@ -15,6 +15,11 @@ public class RegistServlet extends HttpServlet{
 
 
 			String forwardURL = null;
+
+			if(pass.length() < 8) {
+				request.setAttribute("errorMessageLog", "パスワードが短いです");
+				forwardURL = "/database/registerror.jsp";
+			}else {
 			try {
 				TravelerBeanIL tbean = new TravelerBeanIL(username, pass);
 				int updateCount = TravelerDAOIL.insert(tbean);
@@ -29,7 +34,9 @@ public class RegistServlet extends HttpServlet{
 				forwardURL = "/jsp/registerror.jsp";
 			}catch (SQLException e) {
 				e.printStackTrace();
+				request.setAttribute("errorMessageUsername", "既に存在するユーザー名です");
 				forwardURL = "/jsp/registerror.jsp";
+			}
 			}
 
 			request.getRequestDispatcher(forwardURL).forward(request,response);

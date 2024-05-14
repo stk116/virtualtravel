@@ -13,6 +13,11 @@
 <div class="SUE-container">
   <div class="SUE-top">
     <p class="SUE-message">ƒGƒ‰[</p>
+    <% if (request.getAttribute("errorMessageLog") != null){ %>
+    <p class="SUE-message3"><%=request.getAttribute("errorMessageLog") %></p>
+    <%}else if(request.getAttribute("errorMessageUsername") != null){ %>
+    <p class="SUE-message3"><%=request.getAttribute("errorMessageUsername") %></p>
+    <%} %>
     <div class="message-space"></div>
     <p class="SUE-message2">‰ïˆõ“o˜^‚ÉŽ¸”s‚µ‚Ü‚µ‚½</p>
   </div>

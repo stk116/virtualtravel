@@ -14,6 +14,7 @@
 <div class="error-container">
   <div class="error-top">
     <p class="error-message">エラー</p>
+    <p class="error-messageLogin"><%=request.getAttribute("errorMessageLogin") %></p>
   </div>
   <a class="login-button" href="<%=request.getContextPath() %>/jsp/login.jsp">ログイン画面へ戻る</a>
 </div>
