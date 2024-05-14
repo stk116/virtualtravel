@@ -11,7 +11,7 @@ public class DBManagerT {
 		try {
 			Class.forName("org.postgresql.Driver");
 			Connection con = DriverManager.getConnection(
-					"jdbc:postgresql://43.207.27.181:5432/Vagabondsdb",
+					"jdbc:postgresql://52.195.46.205:5432/Vagabondsdb",
 					"postgres","postgres");
 			return con;
 		}catch (ClassNotFoundException e) {
