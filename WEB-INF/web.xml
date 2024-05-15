@@ -69,6 +69,14 @@
         <url-pattern>/screen3</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>dbtestS</servlet-name>
+        <servlet-class>virtualtravel.DBTestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dbtestS</servlet-name>
+        <url-pattern>/dbtest</url-pattern>
+    </servlet-mapping>
 
 
 </web-app>
