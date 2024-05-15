@@ -110,4 +110,33 @@ public class DBManagerT {
 	}
 
 
+
+
+
+
+public static int insert(String username ,String tour) throws SQLException{
+    Connection con = null;
+    Statement smt = null;
+    String sql = "INSERT INTO T_HISTORY (USERNAME, HIS ,DATE) VALUES("+username+",'"+tour+"',current_date)";
+    try {
+        con = getConnection();
+        smt = con.createStatement();
+        return smt.executeUpdate(sql);
+    }finally {
+        if (smt != null) {
+            try {
+                smt.close();
+            }catch(SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if (con != null) {
+            try {
+                con.close();
+            }catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    }
 }

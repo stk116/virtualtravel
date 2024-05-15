@@ -35,7 +35,7 @@
 
 
 	<div class="button_solid006">
-		<h1><a href="<%=request.getContextPath() %>/tour">>¡“ú‚Ì—·‚Ö</a></h1>
+		<h1><a href="<%=request.getContextPath() %>/tour">¡“ú‚Ì—·‚Ö</a></h1>
 	</div>
 
 

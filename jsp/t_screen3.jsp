@@ -19,7 +19,7 @@
    														<!-- 写真 -->
     </div>
     <div class="button008">
-	<a href="<%=request.getContextPath() %>/jsp/tournoowari.jsp">次へ</a>  <!-- ページ遷移 続ける/やめる-->
+	<a href="<%=request.getContextPath() %>/dbtest">次へ</a>  <!-- ページ遷移 続ける/やめる-->
 </div>
 
 </div>
