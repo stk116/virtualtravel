@@ -19,6 +19,12 @@ public class DBManagerT {
 		}
 	}
 
+	public static int Random() {
+		int r = 0;
+		r= new java.util.Random().nextInt(3) + 1;
+		return r;
+	}
+
 	public static String complexSearch(int r) throws SQLException{
 
 		Connection con = null;
@@ -117,7 +123,7 @@ public class DBManagerT {
 public static int insert(String username ,String tour) throws SQLException{
     Connection con = null;
     Statement smt = null;
-    String sql = "INSERT INTO T_HISTORY (USERNAME, HIS ,DATE) VALUES("+username+",'"+tour+"',current_date)";
+    String sql = "INSERT INTO T_HISTORY (USERNAME, HIS ,DATE) VALUES('"+username+"','"+tour+"',to_char(current_timestamp, 'YYYY/MM/DD HH24:MI:SS'))";
     try {
         con = getConnection();
         smt = con.createStatement();

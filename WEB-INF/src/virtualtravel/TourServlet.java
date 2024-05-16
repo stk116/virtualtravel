@@ -2,6 +2,7 @@ package virtualtravel;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,16 +15,37 @@ public class TourServlet extends HttpServlet{
 			HttpServletResponse response) throws ServletException, IOException{
 			request.setCharacterEncoding("Windows-31J");
 
-				HttpSession session1 = request.getSession();
+				HttpSession session = request.getSession(false);
 
 
 				String tour = null;
 				String explane = null;
 				String forwardURL = null;
 
-				int r = new java.util.Random().nextInt(3);
-				r = r+1;
-				session1.setAttribute("r", r);
+				@SuppressWarnings("unchecked")
+				ArrayList<Integer> arr = (ArrayList<Integer>) session.getAttribute("ArrayList");
+
+				// もしセッションにarrが存在しない場合は新しいリストを作成してセッションに保存
+				if (arr == null) {
+				    arr = new ArrayList<Integer>();
+				    session.setAttribute("ArrayList", arr);
+				}
+
+
+
+				if(arr.size() == 3) {
+					arr.clear();
+				}
+				int r = 0;
+
+				r = DBManagerT.Random();
+				while(arr.contains(r)) {
+					r=DBManagerT.Random();
+				}
+				session.setAttribute("r", r);
+				arr.add(r);
+
+				System.out.println(arr);
 
 
 				try {

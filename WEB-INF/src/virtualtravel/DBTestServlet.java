@@ -22,7 +22,7 @@ public class DBTestServlet extends HttpServlet{
                     if(result <1) {
                         forwardURL = "/jsp/title.jsp";
                     }else {
-                        forwardURL = "/jsp/history.jsp";
+                        forwardURL = "/jsp/tournoowari.jsp";
                     }
                     }catch (SQLException e) {
                         e.printStackTrace();

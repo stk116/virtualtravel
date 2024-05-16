@@ -27,7 +27,7 @@
         <div class="r_sidebar_menu">
             <%=session.getAttribute("username") %>さんがログイン中<br>
             <a href="<%=request.getContextPath() %>/jsp/history.jsp">旅の履歴</a><br>
-            <a href="<%=request.getContextPath() %>/jsp/title.jsp">ログアウト</a><br>
+            <a href="<%=request.getContextPath() %>/sessioninvalidate">ログアウト</a><br>
         </div>
         <div id="r_sidebar_closer" class="r_sidebar_closer"></div>
     </header>

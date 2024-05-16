@@ -25,8 +25,8 @@ public class Screen2Servlet extends HttpServlet{
 				String link = null;
 				String forwardURL = null;
 
-				HttpSession session1 = request.getSession();
-				int r = (int) session1.getAttribute("r");
+				HttpSession session = request.getSession(false);
+				int r = (int) session.getAttribute("r");
 
 				try {
 
