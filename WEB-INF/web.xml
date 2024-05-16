@@ -78,5 +78,6 @@
         <url-pattern>/dbtest</url-pattern>
     </servlet-mapping>
 
+        <servlet-name>finalS</servlet-name>
 
 </web-app>
