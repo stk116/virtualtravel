@@ -79,7 +79,7 @@ transition: all 0.5s;
  .bg{
      height:100%;
      width: 100%;
- 	 background-image:url("/virtualtravel/pics/wa_image.jpg");
+     background-image: url("/virtualtravel/pics/wa_image.jpg");
      background-size:cover;
  }
  .content{
@@ -127,4 +127,3 @@ label #yes{
     opacity: 0;
     pointer-events:all;
 }
-
