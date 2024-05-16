@@ -14,7 +14,7 @@ public class LoginServlet extends HttpServlet{
 			request.setCharacterEncoding("Windows-31J");
 			String username = request.getParameter("username");
 			String pass = request.getParameter("pass");
-			HttpSession session = request.getSession();
+			HttpSession session = request.getSession(true);
 
 
 			String forwardURL = null;

@@ -78,6 +78,22 @@
         <url-pattern>/dbtest</url-pattern>
     </servlet-mapping>
 
+    <servlet>
         <servlet-name>finalS</servlet-name>
+        <servlet-class>virtualtravel.FinalServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>finalS</servlet-name>
+        <url-pattern>/final</url-pattern>
+    </servlet-mapping>
+
+        <servlet>
+        <servlet-name>sessionhakiS</servlet-name>
+        <servlet-class>virtualtravel.SessionInvalidateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sessionhakiS</servlet-name>
+        <url-pattern>/sessioninvalidate</url-pattern>
+    </servlet-mapping>
 
 </web-app>

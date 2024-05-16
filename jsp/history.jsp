@@ -24,7 +24,7 @@
 		  <li>
 				<li><a href="start.jsp">スタートページ</a></li>
 
-				<li><a href="title.jsp">ログアウト</a></li>
+				<li><a href="<%=request.getContextPath() %>/sessioninvalidate">ログアウト</a></li>
 		  </li>
 		</ul>
 	</div>

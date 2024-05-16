@@ -28,10 +28,10 @@
 <br>
 <br>
 　　　　　<div class="login_btn">
-	<a href="login.jsp">ログイン画面へ</a>
+	<a href="<%=request.getContextPath() %>/jsp/login.jsp">ログイン画面へ</a>
 </div>
 　　　　　<div class="touroku_btn">
-<a href="inputregist.jsp">新規会員登録はこちら</a>
+<a href="<%=request.getContextPath() %>/jsp/inputregist.jsp">新規会員登録はこちら</a>
 </div>
 
 

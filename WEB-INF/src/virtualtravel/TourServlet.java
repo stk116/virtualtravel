@@ -15,7 +15,7 @@ public class TourServlet extends HttpServlet{
 			HttpServletResponse response) throws ServletException, IOException{
 			request.setCharacterEncoding("Windows-31J");
 
-				HttpSession session = request.getSession();
+				HttpSession session = request.getSession(false);
 
 
 				String tour = null;
