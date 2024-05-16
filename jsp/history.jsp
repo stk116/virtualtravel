@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=windows-31j"
     pageEncoding="windows-31j"%>
+<%@ page import="java.util.*" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja">
 <head>
@@ -22,8 +23,7 @@
 
 		<ul>
 		  <li>
-				<li><a href="start.jsp">スタートページ</a></li>
-
+				<li><a href="<%=request.getContextPath() %>/tour">スタートページ</a></li>
 				<li><a href="<%=request.getContextPath() %>/sessioninvalidate">ログアウト</a></li>
 		  </li>
 		</ul>
@@ -41,7 +41,7 @@
 			<th class="r2">ツアー名</th>
 			<th class="r3">お気に入り</th>
 			</tr>
-			<tr>
+<!--			<tr>
 				<td>date()</td>
 				<td>select tour from db;</td>
 				<td align="center">
@@ -51,18 +51,26 @@
 						<i class="fa-regular fa-star" id="no"></i>
 					</label>
 				</td>
-			</tr>
-			<tr>
-				<td>date()</td>
-				<td>select tour from db;</td>
+				</tr> -->
+				<%
+				List<String> hisList = (List<String>)request.getAttribute("hisList");
+				List<String> dateList = (List<String>)request.getAttribute("dateList");
+				for(int i = 0; i< hisList.size(); i++){
+
+				%>
+
+				<tr>
+				<td><%=dateList.get(i) %></td>
+				<td><%=hisList.get(i) %></td>
 				<td align="center">
-					<input type="checkbox" id="okini2">
-					<label for="okini2">
-						<i class="fa-solid fa-star" id="yes"></i>
-						<i class="fa-regular fa-star" id="no"></i>
-					</label>
+					<input type="checkbox">
 				</td>
-			</tr>
+
+
+				<%
+				}
+				%>
+
 
 		</table>
 
