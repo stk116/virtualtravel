@@ -19,6 +19,12 @@ public class DBManagerT {
 		}
 	}
 
+	public static int Random() {
+		int r = 0;
+		r= new java.util.Random().nextInt(3) + 1;
+		return r;
+	}
+
 	public static String complexSearch(int r) throws SQLException{
 
 		Connection con = null;
