@@ -21,7 +21,7 @@
 	</div>
 
 	<div class="owaributton">
-		<h1><a href="<%=request.getContextPath() %>/jsp/history.jsp">今回の旅は終了！</a></h1>
+		<h1><a href="<%=request.getContextPath() %>/final">今回の旅は終了！</a></h1>
 	</div>
 
 </body>
