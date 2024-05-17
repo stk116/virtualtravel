@@ -19,19 +19,19 @@
 	<header>
 
         <div class="header">
-            <h3>ようこそ<%=session.getAttribute("username") %>さん</h3>
+            <h3>ようこそ <%=session.getAttribute("username") %> さん！</h3>
         </div>
         <input id="r_sidebar" class="r_sidebar_button" type="checkbox">
         <label class="r_sidebar_label" for="r_sidebar"></label>
 
         <div class="r_sidebar_menu">
             <%=session.getAttribute("username") %>さんがログイン中<br>
-            <a href="<%=request.getContextPath() %>/final">旅の履歴</a><br>
-            <a href="<%=request.getContextPath() %>/sessioninvalidate">ログアウト</a><br>
+            <a href="<%=request.getContextPath() %>/final" style="text-decoration: none;">旅の履歴</a><br>
+            <a href="<%=request.getContextPath() %>/sessioninvalidate" style="text-decoration: none;">ログアウト</a><br>
         </div>
         <div id="r_sidebar_closer" class="r_sidebar_closer"></div>
     </header>
-	<br><br>
+    <br>
 
 
 	<div class="button_solid006">

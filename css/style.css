@@ -5,14 +5,15 @@ html, body {
 }
 .header {                          /* ヘッダーの設定 */
     width:100%;                    /* 横幅はコンテンツ分 */
-    height:3rem;                   /* ヘッダーの縦幅 */
+    height:4rem;                   /* ヘッダーの縦幅 */
     position:fixed;                /* 要素の位置を画面の決まった位置に固定 */
     z-index:99;                    /* 子孫要素との位置関係 */
     top:0rem;                      /* ヘッダーの位置（画面上部からの距離） */
     right:0rem;                    /* ヘッダーの位置（画面右端からの距離） */
 
-    background:deepskyblue;        /* ヘッダーの色 */
-    color:white;                   /* ヘッダー文字の色 */
+    background:rgba(255,235,215,0.8);            /* ヘッダーの色 */
+    color:#3399CC;                   /* ヘッダー文字の色 */
+    font-size:25px;                /* ヘッダー文字の大きさ */
     display:flex;                  /* 直下の要素を並列にする */
     justify-content:center;        /* 文字の左右中央寄せ */
     align-items:center;            /* 文字の上下中央寄せ */
@@ -31,11 +32,11 @@ html, body {
 }
 .r_sidebar_label {                 /* サイドバーラベルの設定 */
     position:fixed;
-    top:0.5rem;                    /* サイドバーボタン（全体）の位置（画面上部からの距離） */
+    top:0.75rem;                    /* サイドバーボタン（全体）の位置（画面上部からの距離） */
     right:0.5rem;                  /* サイドバーボタン（全体）の位置（画面右端からの距離） */
 
-    width:4rem;                    /* サイドバーボタン（全体）の横幅 */
-    height:2rem;                   /* サイドバーボタン（全体）の縦幅 */
+    width:5rem;                    /* サイドバーボタン（全体）の横幅 */
+    height:2.5rem;                   /* サイドバーボタン（全体）の縦幅 */
     border-radius:2rem;            /* サイドバーボタン（全体）の角（丸みをもたせる） */
     background:gray;               /* サイドバーボタンを押下する前のボタン背景の色 */
 
@@ -49,8 +50,8 @@ html, body {
     position:absolute;             /* 要素の配置方法を指定（絶対配置） */
     background:white;              /* サイドバーボタン（移動する円）の色 */
     left:50%;                      /* サイドバーボタン（移動する円）の位置（全体から初期位置がどこか） */
-    width:2rem;                    /* サイドバーボタン（移動する円）の横幅 */
-    height:2rem;                   /* サイドバーボタン（移動する円）の縦幅 */
+    width:2.5rem;                    /* サイドバーボタン（移動する円）の横幅 */
+    height:2.5rem;                   /* サイドバーボタン（移動する円）の縦幅 */
     border-radius:2rem;            /* サイドバーボタン（移動する円）の角（丸みをもたせる） */
     transition:0.2s;               /* サイドバーを閉じたときのボタン（移動する円）の移動速度 */
     box-shadow:4px 0 4px -2px #333;
@@ -66,14 +67,15 @@ input[type="checkbox"]#r_sidebar:checked ~ .r_sidebar_label:before{
 
 .r_sidebar_menu {
     position:fixed;
-    top:3rem;              /* サイドバーの表示位置（ヘッダー分少し下げる） */
+    top:4rem;              /* サイドバーの表示位置（ヘッダー分少し下げる） */
     right:-335px;          /* サイドバーの表示位置（右端の画面外に隠す） */
 
     height:calc( 100vh - 3rem);
     width:300px;           /* サイドバーの横幅 */
     padding:0.5rem 1rem;   /* サイドバーに表示する文字の上と左の余白 */
+    font-size:25px;        /* サイドバーに表示する文字の大きさ */
     background:white;      /* サイドバー展開時の背景色 */
-    color:#333;            /* サイドバー展開時の文字の色（黒） */
+    color:#059ecb;            /* サイドバー展開時の文字の色 */
 
     transition:0.2s;
     overflow:auto;         /* 要素のボックスからはみ出た部分はブラウザにより表示が変わる（基本的にはスクロールできる状態に） */
@@ -86,7 +88,7 @@ input[type="checkbox"]#r_sidebar:checked ~ .r_sidebar_menu{
 }
 .r_sidebar_closer {
     position:fixed;
-    top:3rem;
+    top:4rem;         /* 靄の位置 */
     left:0;
 
     height:calc(100vh - 3rem);
@@ -121,14 +123,16 @@ main {
 
 .button_solid006 a {
     position: relative;
+    top:3.5rem;
     display: flex;                /* 子要素の位置を調整するCSS */
     justify-content: center;      /* 左右中央寄せ */
     align-items: center;          /* 上下中央寄せ */
     margin: 250px auto;
     max-width: 480px;
     padding: 60px 75px;
-    background: #6bb6ff;
-    color: #FFF;
+    background: #8392fc;          /* ボタンの色 */
+    color: #FFF;                  /* ボタンの文字の色 */
+    font-size:55px;
     transition: 0.6s ease-in-out;
     font-weight: 1200;
     border-radius: 200px;
@@ -251,7 +255,7 @@ animation:haikei 15s infinite;
 .button0080 a {
     background: #eee;
     position:fixed;
-    top:20rem;                         /* 画面上部からの距離 */
+    top:45%;                         /* 画面上部からの距離 */
     right:1rem;                        /* 画面右端からの距離 */
     display: flex;                     /* 子要素の位置を調整するCSS */
     justify-content: space-around;     /* 横方向 */

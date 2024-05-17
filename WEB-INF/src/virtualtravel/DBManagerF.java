@@ -31,7 +31,8 @@ public class DBManagerF {
 		ResultSet rs = null;
 
 
-		String sqlHis = "SELECT his FROM t_history WHERE USERNAME='" + username + "'";
+		// String sqlHis = "SELECT his FROM t_history WHERE USERNAME='" + username + "'";
+		String sqlHis = "SELECT his FROM t_history WHERE USERNAME='" + username + "' ORDER BY Date DESC";
 
 		List<String> hisList = new ArrayList<String>();
 
@@ -81,7 +82,7 @@ public class DBManagerF {
 		ResultSet rs = null;
 
 
-		String sqlHis = "SELECT date FROM t_history WHERE USERNAME='" + username + "'";
+		String sqlHis = "SELECT date FROM t_history WHERE USERNAME='" + username + "'ORDER BY Date DESC";
 
 		List<String> dateList = new ArrayList<String>();
 

@@ -10,28 +10,29 @@
 
 
 </head>
-<body>
+<body bgcolor="black">
 
 <div class="photo-container">
     <div class="photo-caption">
-      <h2 style="text-align:left"> <%=request.getAttribute("name") %> </h2> <!-- 名所 -->
-  <img src="<%=request.getAttribute("pic") %>" width="1150" height="600">
+      <h2 style="text-align:left"><p style="color: white;">　<%=request.getAttribute("name") %></p> </h2> <!-- 名所 -->
+  	  <img src="<%=request.getAttribute("pic") %>" width="1150" height="600">
    														<!-- 写真 -->
     </div>
-    <div class="button008">
-	<a href="<%=request.getContextPath() %>/dbtest">次へ</a>  <!-- ページ遷移 続ける/やめる-->
-</div>
 
-</div>
+    <div class="button008">
+		<a href="<%=request.getContextPath() %>/dbtest">次へ</a>  <!-- ページ遷移 続ける/やめる-->
+	</div>
+
+
     <div class="button009">
 	<a href="<%=request.getContextPath() %>/screen2">前の場所へ</a>  <!-- ページ遷移 ツアー２-->
+	</div>
+
+    <p style="color: white;"> <%=request.getAttribute("place") %> </p> <!-- 住所 -->
+    <p style="color: white;">  <%=request.getAttribute("text") %> </p>  <!-- 説明 -->
+
+    <p style="color: white;">参照先： <%=request.getAttribute("link") %> </p> <!-- 参照 -->
+
 </div>
-
-    <p class="address"> <%=request.getAttribute("place") %> </p> <!-- 住所 -->
-    <p>  <%=request.getAttribute("text") %> </p>  <!-- 説明 -->
-
-    <br><br>
-    参照先：  <%=request.getAttribute("link") %> <!-- 参照 -->
-
 </body>
 </html>
