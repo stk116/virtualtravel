@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/Signupteststyle.css">
 </head>
 <body>
-<h2>ログインエラー画面</h2>
+<!-- <h2>ログインエラー画面</h2> --><br>
 <div id="tekito"></div>
 
 <div class="error-container">
