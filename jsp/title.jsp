@@ -7,9 +7,9 @@
 	<title>タイトル画面</title>
 		<link rel="stylesheet" href="<%=request.getContextPath() %>/css/title.css">
 </head>
-<body>
-<div class="bg">
-<div class="content">
+<body class="titleBody">
+<div class="titleBG">
+<div class="titleContent">
 <br>
 
 <div class="youkoso">
@@ -18,7 +18,7 @@
 <div class="syuppatsu">
 <h3>仮想の旅へ出発しましょう</h3>
 </div>
-<div class="text">
+<div class="titleText">
 本サイトは、時間や金銭的な事情、あるいは体力的な問題から旅行に出かけることができない方でも<br>
 気軽に旅行気分を味わうことができるwebサイトです。<br>
 ランダムでツアーを選定し、素敵な旅へお連れします。<br>
@@ -27,10 +27,10 @@
 <br>
 <br>
 <br>
-　　　　　<div class="login_btn">
+　　　　　<div class="title_login_btn">
 	<a href="<%=request.getContextPath() %>/jsp/login.jsp">ログイン画面へ</a>
 </div>
-　　　　　<div class="touroku_btn">
+　　　　　<div class="title_touroku_btn">
 <a href="<%=request.getContextPath() %>/jsp/inputregist.jsp">新規会員登録はこちら</a>
 </div>
 
