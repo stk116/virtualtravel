@@ -19,6 +19,9 @@ public class RegistServlet extends HttpServlet{
 			if(pass.length() < 8) {
 				request.setAttribute("errorMessageLog", "パスワードが短いです");
 				forwardURL = "/jsp/registerror.jsp";
+			}else if(pass.contains(" ")) {
+				request.setAttribute("errorMessageLog", "スペースをパスワードに使用できません");
+				forwardURL = "/jsp/registerror.jsp";
 			}else {
 			try {
 				TravelerBeanIL tbean = new TravelerBeanIL(username, pass);
