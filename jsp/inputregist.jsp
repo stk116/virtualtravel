@@ -14,7 +14,7 @@
       <form action="<%=request.getContextPath() %>/regist" method="POST">
         <p class="fsize">新規会員登録画面</p>
         <input type="text" name="username" placeholder="Username（8文字以内でお願いします）" />
-        <input type="password" name="pass"placeholder="Password（8文字以上16文字未満の英数字で登録してください）" />
+        <input type="password" name="pass"placeholder="Password（8文字以上16文字以内の英数字で登録してください）" />
         <button type="submit">登録　</button>
       </form>
       <br>

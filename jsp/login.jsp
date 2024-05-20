@@ -15,7 +15,7 @@
         <p class="fsize">ログイン画面</p>
         <input type="text" name="username" placeholder="Username" />
         <input type="password" name="pass" placeholder="Password" />
-        <button type="submit" class="submit_btn">ログイン</button>
+        <button type="submit" class="submit_btn">ログイン　</button>
       </form>
      <form action="<%=request.getContextPath() %>/sessioninvalidate" method="get">
     <br><button type="submit">タイトル画面に戻る　</button>
