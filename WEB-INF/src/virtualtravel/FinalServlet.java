@@ -54,6 +54,13 @@ public class FinalServlet extends HttpServlet{
 					} catch (SQLException e) {
 						e.printStackTrace();
 					}
+					if(check == null) {
+						try {
+							check = DBManagerF.FavoriteSearch(tour, username);
+						} catch (SQLException e) {
+							e.printStackTrace();
+						}
+					}
 					session.setAttribute("checkbox_value" + i, check);
 				}
 

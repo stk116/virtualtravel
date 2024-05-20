@@ -32,7 +32,7 @@ public class DBManagerF {
 
 
 		// String sqlHis = "SELECT his FROM t_history WHERE USERNAME='" + username + "'";
-		String sqlHis = "SELECT his FROM t_historysample WHERE USERNAME='" + username + "' ORDER BY Date DESC";
+		String sqlHis = "SELECT his FROM t_history WHERE USERNAME='" + username + "' ORDER BY Date DESC";
 
 		List<String> hisList = new ArrayList<String>();
 
@@ -82,7 +82,7 @@ public class DBManagerF {
 		ResultSet rs = null;
 
 
-		String sqlHis = "SELECT date FROM t_historysample WHERE USERNAME='" + username + "'ORDER BY Date DESC";
+		String sqlHis = "SELECT date FROM t_history WHERE USERNAME='" + username + "'ORDER BY Date DESC";
 
 		List<String> dateList = new ArrayList<String>();
 
@@ -131,7 +131,7 @@ public class DBManagerF {
 		Statement smt = null;
 
 
-		String sql = "update t_historysample set fav='" + checked + "' where username ='" + username + "' and his='" + tour + "'";
+		String sql = "update t_history set fav='" + checked + "' where username ='" + username + "' and his='" + tour + "'";
 
 
 		try {
@@ -163,7 +163,7 @@ public class DBManagerF {
 		Statement smt = null;
 
 
-		String sql = "update t_historysample set fav='null' where username = '" + username + "' and his='" + tour + "'";
+		String sql = "update t_history set fav='null' where username = '" + username + "' and his='" + tour + "'";
 
 
 		try {
@@ -195,7 +195,7 @@ public class DBManagerF {
 		Statement smt = null;
 
 
-		String sql = "select * from t_historysample order by date asc";
+		String sql = "select * from t_history order by date asc";
 
 
 		try {
@@ -229,7 +229,7 @@ public class DBManagerF {
 		String favorite = null;
 
 
-		String sql = "SELECT FAV FROM T_HISTORYSAMPLE WHERE USERNAME='" + username + "' and HIS='" + tour +
+		String sql = "SELECT FAV FROM T_HISTORY WHERE USERNAME='" + username + "' and HIS='" + tour +
 				"' order by date desc limit 1";
 
 		try {
@@ -275,7 +275,7 @@ public class DBManagerF {
 		String favorite = null;
 
 
-		String sql = "SELECT FAV FROM T_HISTORYSAMPLE WHERE USERNAME='" + username + "' and HIS='" + tour +
+		String sql = "SELECT FAV FROM T_HISTORY WHERE USERNAME='" + username + "' and HIS='" + tour +
 				"' order by date desc limit 1 offset 1";
 
 		try {
