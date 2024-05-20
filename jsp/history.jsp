@@ -30,28 +30,19 @@
 	</div>
 
 	<div class="bg">
+	<div class="bigContent">
+	<p class="history"><b>旅の履歴</b></p>
 	<div class="content">
-		<table class="table" border="2" cellspacing="1">
-			<caption>
+		<table class="table" border="2" cellspacing="1" >
+			<!-- <caption class="tcaption">
 				<b><u>旅の履歴</u></b><br/>
 
-			</caption>
-			<tr>
+			</caption> -->
+			<tr class="thead">
 			<th class="r1">日付</th>
 			<th class="r2">ツアー名</th>
 			<th class="r3">お気に入り</th>
 			</tr>
-<!--			<tr>
-				<td>date()</td>
-				<td>select tour from db;</td>
-				<td align="center">
-					<input type="checkbox" id="okini">
-					<label for="okini">
-						<i class="fa-solid fa-star" id="yes"></i>
-						<i class="fa-regular fa-star" id="no"></i>
-					</label>
-				</td>
-				</tr> -->
 				<%
 				List<String> hisList = (List<String>)request.getAttribute("hisList");
 				List<String> dateList = (List<String>)request.getAttribute("dateList");
@@ -74,6 +65,7 @@
 
 		</table>
 
+	</div>
 	</div>
 	</div>
 
