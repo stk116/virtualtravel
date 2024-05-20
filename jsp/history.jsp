@@ -33,6 +33,7 @@
 	<div class="bigContent">
 	<p class="history"><b>—·‚Ì—š—ğ</b></p>
 	<div class="content">
+	<form action="<%=request.getContextPath() %>/favorite" method="post">
 		<table class="table" border="2" cellspacing="1" >
 			<!-- <caption class="tcaption">
 				<b><u>—·‚Ì—š—ğ</u></b><br/>
@@ -44,8 +45,8 @@
 			<th class="r3">‚¨‹C‚É“ü‚è</th>
 			</tr>
 				<%
-				List<String> hisList = (List<String>)request.getAttribute("hisList");
-				List<String> dateList = (List<String>)request.getAttribute("dateList");
+				List<String> hisList = (List<String>)session.getAttribute("hisList");
+				List<String> dateList = (List<String>)session.getAttribute("dateList");
 				for(int i = 0; i< hisList.size(); i++){
 
 				%>
@@ -54,7 +55,9 @@
 				<td><%=dateList.get(i) %></td>
 				<td><%=hisList.get(i) %></td>
 				<td align="center">
-					<input type="checkbox">
+					<input class ="star-input" type="checkbox" id ="star_<%=i %>" name="checkbox_<%=i %>" value="checked"
+					<% if ("checked".equals(session.getAttribute("checkbox_value" + i ))) { %>checked="checked"<% } %>>
+					<label class="star-label" for="star_<%=i %>">š</label>
 				</td>
 
 
@@ -64,6 +67,8 @@
 
 
 		</table>
+		<input class =favbutton type="submit" value="‚Ü‚Æ‚ß‚Ä•Û‘¶">
+		</form>
 
 	</div>
 	</div>

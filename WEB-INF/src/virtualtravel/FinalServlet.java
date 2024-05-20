@@ -28,6 +28,8 @@ public class FinalServlet extends HttpServlet{
 
 				try {
 
+					DBManagerF.simpleUpdateDate();
+
 					hisList = new ArrayList<String>();
 					dateList = new ArrayList<String>();
 
@@ -39,7 +41,21 @@ public class FinalServlet extends HttpServlet{
 					e.printStackTrace();
 				}
 				request.setAttribute("hisList", hisList);
+				session.setAttribute("hisList",hisList);
 				request.setAttribute("dateList", dateList);
+				session.setAttribute("dateList", dateList);
+
+				for (int i = hisList.size()-1; i >= 0; i--) {
+					String check = null;
+					@SuppressWarnings("unchecked")
+					String tour = ((List<String>) session.getAttribute("hisList")).get(i);
+					try {
+						check = DBManagerF.FavoriteSearchFirst(tour,username);
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+					session.setAttribute("checkbox_value" + i, check);
+				}
 
 				if (forwardURL != null) {
 					request.setAttribute("hisList", hisList);
