@@ -31,7 +31,8 @@ public class DBManagerF {
 		ResultSet rs = null;
 
 
-		String sqlHis = "SELECT his FROM t_history WHERE USERNAME='" + username + "'";
+		// String sqlHis = "SELECT his FROM t_history WHERE USERNAME='" + username + "'";
+		String sqlHis = "SELECT his FROM t_historysample WHERE USERNAME='" + username + "' ORDER BY Date DESC";
 
 		List<String> hisList = new ArrayList<String>();
 
@@ -81,7 +82,7 @@ public class DBManagerF {
 		ResultSet rs = null;
 
 
-		String sqlHis = "SELECT date FROM t_history WHERE USERNAME='" + username + "'";
+		String sqlHis = "SELECT date FROM t_historysample WHERE USERNAME='" + username + "'ORDER BY Date DESC";
 
 		List<String> dateList = new ArrayList<String>();
 
@@ -122,6 +123,194 @@ public class DBManagerF {
 		return dateList;
 
 
+	}
+
+	public static void simpleUpdateFav(String  checked, String tour, String username) throws SQLException{
+
+		Connection con = null;
+		Statement smt = null;
+
+
+		String sql = "update t_historysample set fav='" + checked + "' where username ='" + username + "' and his='" + tour + "'";
+
+
+		try {
+			con = getConnection();
+			smt = con.createStatement();
+			smt.executeUpdate(sql);
+
+		}finally {
+			if (smt != null) {
+				try {
+					smt.close();
+				}catch(SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				}catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+
+	public static void simpleUpdateNull(String tour, String username) throws SQLException{
+
+		Connection con = null;
+		Statement smt = null;
+
+
+		String sql = "update t_historysample set fav='null' where username = '" + username + "' and his='" + tour + "'";
+
+
+		try {
+			con = getConnection();
+			smt = con.createStatement();
+			smt.executeUpdate(sql);
+
+		}finally {
+			if (smt != null) {
+				try {
+					smt.close();
+				}catch(SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				}catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+
+	public static void simpleUpdateDate() throws SQLException{
+
+		Connection con = null;
+		Statement smt = null;
+
+
+		String sql = "select * from t_historysample order by date asc";
+
+
+		try {
+			con = getConnection();
+			smt = con.createStatement();
+			smt.executeQuery(sql);
+
+		}finally {
+			if (smt != null) {
+				try {
+					smt.close();
+				}catch(SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				}catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+
+	public static String FavoriteSearch(String tour, String username) throws SQLException{
+
+		Connection con = null;
+		Statement smt = null;
+		ResultSet rs = null;
+		String favorite = null;
+
+
+		String sql = "SELECT FAV FROM T_HISTORYSAMPLE WHERE USERNAME='" + username + "' and HIS='" + tour +
+				"' order by date desc limit 1";
+
+		try {
+			con = getConnection();
+			smt = con.createStatement();
+			rs = smt.executeQuery(sql);
+
+			while(rs.next()) {
+			favorite = rs.getString("fav");
+			}
+		}finally {
+			if (rs != null) {
+				try {
+				rs.close();
+				}catch(SQLException e){
+					e.printStackTrace();
+				}
+			}
+			if (smt != null) {
+				try {
+					smt.close();
+				}catch(SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				}catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return favorite;
+	}
+
+	public static String FavoriteSearchFirst(String tour, String username) throws SQLException{
+
+		Connection con = null;
+		Statement smt = null;
+		ResultSet rs = null;
+		String favorite = null;
+
+
+		String sql = "SELECT FAV FROM T_HISTORYSAMPLE WHERE USERNAME='" + username + "' and HIS='" + tour +
+				"' order by date desc limit 1 offset 1";
+
+		try {
+			con = getConnection();
+			smt = con.createStatement();
+			rs = smt.executeQuery(sql);
+
+			while(rs.next()) {
+			favorite = rs.getString("fav");
+			}
+		}finally {
+			if (rs != null) {
+				try {
+				rs.close();
+				}catch(SQLException e){
+					e.printStackTrace();
+				}
+			}
+			if (smt != null) {
+				try {
+					smt.close();
+				}catch(SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				}catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return favorite;
 	}
 
 

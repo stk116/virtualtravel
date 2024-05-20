@@ -30,31 +30,23 @@
 	</div>
 
 	<div class="bg">
+	<div class="bigContent">
+	<p class="history"><b>旅の履歴</b></p>
 	<div class="content">
-		<table class="table" border="2" cellspacing="1">
-			<caption>
+	<form action="<%=request.getContextPath() %>/favorite" method="post">
+		<table class="table" border="2" cellspacing="1" >
+			<!-- <caption class="tcaption">
 				<b><u>旅の履歴</u></b><br/>
 
-			</caption>
-			<tr>
+			</caption> -->
+			<tr class="thead">
 			<th class="r1">日付</th>
 			<th class="r2">ツアー名</th>
 			<th class="r3">お気に入り</th>
 			</tr>
-<!--			<tr>
-				<td>date()</td>
-				<td>select tour from db;</td>
-				<td align="center">
-					<input type="checkbox" id="okini">
-					<label for="okini">
-						<i class="fa-solid fa-star" id="yes"></i>
-						<i class="fa-regular fa-star" id="no"></i>
-					</label>
-				</td>
-				</tr> -->
 				<%
-				List<String> hisList = (List<String>)request.getAttribute("hisList");
-				List<String> dateList = (List<String>)request.getAttribute("dateList");
+				List<String> hisList = (List<String>)session.getAttribute("hisList");
+				List<String> dateList = (List<String>)session.getAttribute("dateList");
 				for(int i = 0; i< hisList.size(); i++){
 
 				%>
@@ -63,7 +55,9 @@
 				<td><%=dateList.get(i) %></td>
 				<td><%=hisList.get(i) %></td>
 				<td align="center">
-					<input type="checkbox">
+					<input class ="star-input" type="checkbox" id ="star_<%=i %>" name="checkbox_<%=i %>" value="checked"
+					<% if ("checked".equals(session.getAttribute("checkbox_value" + i ))) { %>checked="checked"<% } %>>
+					<label class="star-label" for="star_<%=i %>">★</label>
 				</td>
 
 
@@ -73,7 +67,10 @@
 
 
 		</table>
+		<input class =favbutton type="submit" value="まとめて保存">
+		</form>
 
+	</div>
 	</div>
 	</div>
 

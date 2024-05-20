@@ -37,6 +37,7 @@ transition: all 0.5s;
  }
 
  label #humb, label #times{
+     z-index:100;
      right:0;
      position: absolute;
      cursor: pointer;
@@ -76,34 +77,53 @@ transition: all 0.5s;
 
  }
 
+/* あああああああああああああああああああああああああああああああああああああああああああああ */
+
  .bg{
      height:100%;
      width: 100%;
      background-image: url("/virtualtravel/pics/wa_image.jpg");
      background-size:cover;
  }
+.bigContent{
+	height:100%;
+	width:100%;
+ background-color: rgba(255, 255, 255, 0.6);
+ z-index: 5;
+ }
+ .history{
+ position:fixed;
+ top:13%;
+ left:25%;
+ font-family: 'HG正楷書体-PRO' , serif ;
+ font-size:40px;
+ }
  .content{
-    height:100%;
-    background-color: rgba(255, 255, 255, 0.6);
+    font-family:"monospace";
+    position:fixed;
+    top:20%;
+    left:25%;
+    bottom:10%;
+    height:70%;
+    width:50%;
+    overflow:auto;
     }
 .table{
-    margin:auto;
-    background-color: rgba(250,235,215,0.8);
+	width:100%;
+    background-color: rgba(250,235,215,0.9);
     line-height: 40px;
+    border-color:darkgrey;
 }
 
-table caption{
-    text-align: left;
-    font-size:xx-large;
-    padding:100px 0 0 0;
-}
 table th{
+	z-index:2;
     font-size:x-large;
-    /*padding: 10px 30px 10px 30px;*/
+    border: 2px solid black;
+    border-color:gray;
 }
 
 .r1{
-    padding: 10px 50px 10px 50px;
+    padding: 10px 70px 10px 70px;
 }
 .r2{
     padding: 10px 150px 10px 150px;
@@ -111,19 +131,28 @@ table th{
 .r3{
     padding: 10px 10px 10px 10px;
 }
-#okini{
+.thead{
+	background-color:#e3e2a5;
+	position: sticky;
+    top: 0;
+    left: 0;
 
 }
 
-label #no{
-    position: absolute;
-    cursor: pointer;
+.star-input{
+	display: none;
 }
-label #yes{
-    position: absolute;
-    cursor: pointer;
+
+.star-label{
+	font-size: 24px;
+	color:#bbb;
+	cursor:pointer;
 }
-#okini:checked ~ label #yes{
-    opacity: 0;
-    pointer-events:all;
+
+.star-input:checked ~ .star-label{
+	color:#f90;
+}
+
+.favbutton{
+	position:relative;
 }

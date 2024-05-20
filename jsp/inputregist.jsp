@@ -8,7 +8,7 @@
 </head>
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/Signupteststyle.css">
 <body>
-<h2>V‹K‰ïˆõ“o˜^‰æ–Ê</h2>
+<!-- <h2>V‹K‰ïˆõ“o˜^‰æ–Ê</h2> --><br><br>
 <div id="wrapper"></div>
 <div class="signup_container">
       <form action="<%=request.getContextPath() %>/regist" method="POST">

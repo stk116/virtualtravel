@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/Signupteststyle.css">
 </head>
 <body>
-<h2>新規会員登録エラー画面</h2>
+<!-- <h2>新規会員登録エラー画面</h2> --><br><br>
 <div id="wrapper"></div>
 <div class="SUE-container">
   <div class="SUE-top">

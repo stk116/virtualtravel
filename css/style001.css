@@ -7,6 +7,10 @@ body {
     text-align: center;
 }
 
+.photo-container{
+	font-color:white;
+}
+/*
 header {
     background-color: #333;
     color: #fff;
@@ -16,14 +20,16 @@ header {
 h1 {
     margin: 0;
 }
-
+*/
 /*  次に進むボタン  */
 
 .button008 a {
     background: #eee;
     position: absolute;
     top: 50%;
-    right: 5%;
+    right: 1rem;
+    height: 50px;
+    width:  100px;
     transform: translate(50%, -50%);
     display: flex;
     justify-content: space-around;
@@ -120,7 +126,9 @@ h1 {
     background: #eee;
     position: absolute;
     top: 50%;
-    left: -3%;
+    left: -3.5rem;
+    height: 50px;
+    width:  100px;
     transform: translate(50%, -50%);
     display: flex;
     justify-content: space-around;

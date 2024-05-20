@@ -9,11 +9,11 @@
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/Signupteststyle.css">
 </head>
 <body>
-<h2>‰ïˆõ“o˜^Š®—¹‰æ–Ê</h2>
+<!-- <h2>‰ïˆõ“o˜^Š®—¹‰æ–Ê</h2> --><br><br>
 <div id="wrapper"></div>
 <div class="success-container">
   <div class="success-top">
-    <p class="success-message">‰ïˆõ“o˜^‚ªŠ®—¹‚µ‚Ü‚µ‚½I</p>
+    <p class="success-message"><b>‰ïˆõ“o˜^‚ªŠ®—¹‚µ‚Ü‚µ‚½I</b></p>
   </div>
   <a class="login-button_1" href="<%=request.getContextPath() %>/jsp/login.jsp">ƒƒOƒCƒ“‰æ–Ê‚Ö</a>
 </div>
