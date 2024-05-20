@@ -55,7 +55,7 @@ animation:changeBackgroundTekito 15s infinite;
 
 .signup_container {
   width: 500px;
-  height:300px;
+  height:370px;              /* 新規会員登録の枠の高さ */
   margin: 100px auto;
   padding: 20px;
   background-color: #FFC0CB;
@@ -226,7 +226,7 @@ button:hover:after{
 
 .login_container {
   width: 500px;
-  height:300px;
+  height:370px;                /* ログイン画面の枠の高さ */
   margin: 100px auto;
   padding: 20px;
   background-color: #FFC0CB ;
