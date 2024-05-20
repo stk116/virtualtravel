@@ -35,7 +35,7 @@ public class FavoriteServlet extends HttpServlet{
 			    if(checkboxValue != null &&checkboxValue.equals("checked")) {
 			    	try {
 			    		String tour = ((List<String>) session.getAttribute("hisList")).get(i);
-			    		System.out.println(tour);
+			    		//System.out.println(tour);
 						DBManagerF.simpleUpdateFav(checkboxValue, tour, username);
 					} catch (SQLException e) {
 						e.printStackTrace();
@@ -43,7 +43,7 @@ public class FavoriteServlet extends HttpServlet{
 			    }else {
 			    	try {
 			    		String tour = ((List<String>) session.getAttribute("hisList")).get(i);
-			    		System.out.println(tour);
+			    		//System.out.println(tour);
 						DBManagerF.simpleUpdateNull(tour, username);
 					} catch (SQLException e) {
 						e.printStackTrace();
