@@ -17,6 +17,9 @@
         <input type="password" name="pass" placeholder="Password" />
         <button type="submit">ログイン</button>
       </form>
+     <form action="<%=request.getContextPath() %>/sessioninvalidate" method="get">
+    <br><button type="submit">タイトル画面に戻る　</button>
+</form>
 </div>
 </body>
 </html>
