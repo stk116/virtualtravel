@@ -1,11 +1,5 @@
-*{
- list-style: none;
- text-decoration: none;
- margin: 0;
- padding:0;
- box-sizing: border-box;
-}
-.sidebar{
+/*historyのサイドバー  */
+.HISsidebar{
 position: fixed;
 right: -250px;
 height: 100%;
@@ -14,15 +8,14 @@ background-color:ccc ;
 transition: all 0.5s;
 }
 
-.sidebar header{
+.HISsidebar header{
  font-size: 20px;
  text-align: center;
  line-height: 70px;
  background-color: darkgray;
  }
 
-.sidebar ul a{
- /* display:block;*/
+.HISsidebar ul a{
  height:100%;
  width: 100%;
  line-height: 65px;
@@ -53,7 +46,7 @@ transition: all 0.5s;
      transition: all 0.4s;
  }
  label #times{
-     z-index: 10;
+     z-index: 100;
      right: -190px;
      top:17px;
      font-size: 30px;
@@ -62,7 +55,7 @@ transition: all 0.5s;
      transition: all 0.5s;
  }
 
- #check:checked ~ .sidebar{
+ #check:checked ~ .HISsidebar{
      right:0;
  }
 
@@ -77,13 +70,30 @@ transition: all 0.5s;
 
  }
 
-/* あああああああああああああああああああああああああああああああああああああああああああああ */
+/*historyのコンテンツ */
 
- .bg{
-     height:100%;
-     width: 100%;
-     background-image: url("/virtualtravel/pics/wa_image.jpg");
-     background-size:cover;
+.HIS{
+	overflow:hidden;
+	margin:0;
+
+}
+.specific-jsp-container *{
+ list-style: none;
+ text-decoration: none;
+ margin: 0;
+ padding:0;
+ box-sizing: border-box;
+ z-index:55;
+}
+
+ .HISbg{
+    width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-image:url("/virtualtravel/pics/wa_image.jpg");
+   background-size:cover ;
  }
 .bigContent{
 	height:100%;
@@ -91,14 +101,15 @@ transition: all 0.5s;
  background-color: rgba(255, 255, 255, 0.6);
  z-index: 5;
  }
- .history{
+ .HIShistory{
  position:fixed;
- top:13%;
+ top:8%;
  left:25%;
  font-family: 'HG正楷書体-PRO' , serif ;
  font-size:40px;
+ z-index:5;
  }
- .content{
+ .HIScontent{
     font-family:"monospace";
     position:fixed;
     top:20%;
@@ -108,7 +119,7 @@ transition: all 0.5s;
     width:50%;
     overflow:auto;
     }
-.table{
+.HIStable{
 	width:100%;
     background-color: rgba(250,235,215,0.9);
     line-height: 40px;
@@ -138,6 +149,9 @@ table th{
     left: 0;
 
 }
+.HISform{
+	margin-bottom:0;
+}
 
 .star-input{
 	display: none;
@@ -154,5 +168,14 @@ table th{
 }
 
 .favbutton{
-	position:relative;
+	position:fixed;
+	padding:10px 20px;
+	right:26%;
+	top:90%;
+}
+.hisText{
+	background-color:rgba(255,255,255,0.8);
+	position:fixed;
+	top:90%;
+	left:25%;
 }

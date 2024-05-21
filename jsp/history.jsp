@@ -10,14 +10,15 @@
 		<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/56784c94a5.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="HIS">
+<div class="specific-jsp-container">
 	<input type="checkbox" id="check">
 	<label for="check">
 		<i class="fas fa-bars" id="humb"></i>
 		<i class="fas fa-times" id="times"></i>
 	</label>
 
-	<div class="sidebar">
+	<div class="HISsidebar">
 		<header> <%=session.getAttribute("username") %><br>
 		がログイン中</header>
 
@@ -28,17 +29,15 @@
 		  </li>
 		</ul>
 	</div>
+</div>
 
-	<div class="bg">
+	<div class="HISbg">
 	<div class="bigContent">
-	<p class="history"><b>旅の履歴</b></p>
-	<div class="content">
-	<form action="<%=request.getContextPath() %>/favorite" method="post">
-		<table class="table" border="2" cellspacing="1" >
-			<!-- <caption class="tcaption">
-				<b><u>旅の履歴</u></b><br/>
+	<p class="HIShistory"><b>旅の履歴</b></p>
+	<div class="HIScontent">
+	<form action="<%=request.getContextPath() %>/favorite" method="post" class="HISform">
+		<table class="HIStable" border="2" cellspacing="1" >
 
-			</caption> -->
 			<tr class="thead">
 			<th class="r1">日付</th>
 			<th class="r2">ツアー名</th>
@@ -53,7 +52,7 @@
 
 				<tr>
 				<td><%=dateList.get(i) %></td>
-				<td><%=hisList.get(i) %></td>
+				<td><a href="<%=request.getContextPath() %>/favtour?param=<%=java.net.URLEncoder.encode(hisList.get(i), "UTF-8") %>"><%=hisList.get(i) %></a></td>
 				<td align="center">
 					<input class ="star-input" type="checkbox" id ="star_<%=i %>" name="checkbox_<%=i %>" value="checked"
 					<% if ("checked".equals(session.getAttribute("checkbox_value" + i ))) { %>checked="checked"<% } %>>
@@ -67,10 +66,14 @@
 
 
 		</table>
-		<input class =favbutton type="submit" value="まとめて保存">
-		</form>
+
+
 
 	</div>
+	<input class =favbutton type="submit" value="お気に入りを保存">
+		</form>
+	<a class="hisText">（注意）履歴表に同名のツアーが複数存在する場合、<br>
+		日付が最も新しいものをお気に入りに追加/削除してください</a>
 	</div>
 	</div>
 
