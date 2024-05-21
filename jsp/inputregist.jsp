@@ -18,7 +18,7 @@
         <button type="submit">登録　</button>
       </form>
       <br>
-      <form action="<%=request.getContextPath() %>/jsp/title.jsp" method="get">
+      <form action="<%=request.getContextPath() %>/jsp/title.jsp" method="post">
           <button type="submit">タイトルに戻る　</button>
       </form>
 </div>

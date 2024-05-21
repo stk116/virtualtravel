@@ -21,7 +21,7 @@ public class DBManagerT {
 
 	public static int Random() {
 		int r = 0;
-		r= new java.util.Random().nextInt(3) + 1;
+		r= new java.util.Random().nextInt(12) + 1;
 		return r;
 	}
 

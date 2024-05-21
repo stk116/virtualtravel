@@ -33,7 +33,7 @@ public class TourServlet extends HttpServlet{
 
 
 
-				if(arr.size() == 3) {
+				if(arr.size() == 12) {
 					arr.clear();
 				}
 				int r = 0;
