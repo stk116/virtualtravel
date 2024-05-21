@@ -17,7 +17,7 @@
         <input type="password" name="pass" placeholder="Password" />
         <button type="submit" class="submit_btn">ログイン　</button>
       </form>
-     <form action="<%=request.getContextPath() %>/sessioninvalidate" method="get">
+     <form action="<%=request.getContextPath() %>/jsp/title.jsp" method="post">
     <br><button type="submit">タイトル画面に戻る　</button>
 </form>
 </div>
