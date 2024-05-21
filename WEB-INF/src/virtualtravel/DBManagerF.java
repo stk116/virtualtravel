@@ -313,6 +313,51 @@ public class DBManagerF {
 		return favorite;
 	}
 
+	public static int tourSearch(String tour) throws SQLException{
+
+		Connection con = null;
+		Statement smt = null;
+		ResultSet rs = null;
+		int tourNumber = 0;
+
+
+		String sql = "SELECT NO FROM T_TOUR WHERE TOUR='" + tour +  "'";
+
+		try {
+			con = getConnection();
+			smt = con.createStatement();
+			rs = smt.executeQuery(sql);
+
+			while(rs.next()) {
+			tourNumber = rs.getInt("no");
+			}
+		}finally {
+			if (rs != null) {
+				try {
+				rs.close();
+				}catch(SQLException e){
+					e.printStackTrace();
+				}
+			}
+			if (smt != null) {
+				try {
+					smt.close();
+				}catch(SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				}catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return tourNumber;
+	}
+
 
 	}
 

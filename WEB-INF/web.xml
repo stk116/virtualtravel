@@ -105,5 +105,14 @@
         <url-pattern>/favorite</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>favtourS</servlet-name>
+        <servlet-class>virtualtravel.FavoriteTourServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>favtourS</servlet-name>
+        <url-pattern>/favtour</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>

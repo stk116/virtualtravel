@@ -52,7 +52,7 @@
 
 				<tr>
 				<td><%=dateList.get(i) %></td>
-				<td><%=hisList.get(i) %></td>
+				<td><a href="<%=request.getContextPath() %>/favtour?param=<%=java.net.URLEncoder.encode(hisList.get(i), "UTF-8") %>"><%=hisList.get(i) %></a></td>
 				<td align="center">
 					<input class ="star-input" type="checkbox" id ="star_<%=i %>" name="checkbox_<%=i %>" value="checked"
 					<% if ("checked".equals(session.getAttribute("checkbox_value" + i ))) { %>checked="checked"<% } %>>
