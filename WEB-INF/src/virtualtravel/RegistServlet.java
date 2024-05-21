@@ -37,7 +37,7 @@ public class RegistServlet extends HttpServlet{
 				forwardURL = "/jsp/registerror.jsp";
 			}catch (SQLException e) {
 				e.printStackTrace();
-				request.setAttribute("errorMessageUsername", "既に存在するユーザー名です");
+				request.setAttribute("errorMessageUsername", "既に存在している、若しくは条件を満たしていないユーザー名です");
 				forwardURL = "/jsp/registerror.jsp";
 			}
 			}
