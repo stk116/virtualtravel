@@ -464,7 +464,7 @@ button:hover:after{
 @keyframes caret { 50% { border-color: transparent; } }
 
 .text1{
-font-size:5em;
+font-size:10em;
 	line-height:0.95em;
 	font-weight:bold;
 	color: #FFF;
@@ -474,18 +474,19 @@ font-size:5em;
 		0 0 0.15em #F06292,
 		0 0 0.30em #F06292;
 	filter: saturate(80%);
-position:absolute;
-top:20%;
-left:35%;
+position:fixed;
+top:30px;
+left:12%;
 trasform:traslate(-50%,-50%);
+
 
 font-family: monospace;
 width: 17ch;
 border-right: .08em solid;
 overflow: hidden;
-font-size: 4em;
+font-size: 10em;
 white-space: nowrap;
-animation: typing 5s steps(17, end), caret .5s step-end infinite;
+animation: typing 3.5s steps(17, end), caret .5s step-end infinite;
 }
 
 
@@ -500,15 +501,15 @@ animation: typing 5s steps(17, end), caret .5s step-end infinite;
 		0 0 0.15em #F06292,
 		0 0 0.30em #F06292;
 	filter: saturate(80%);
-  position: absolute;
-  top:40%;
-  left:35%;
+  position: fixed;
+  top:400px;
+  left:18%;
   transform:traslate(-50%,-50%);
-  font-size: 24px;
+  font-size: 60px;
   opacity: 0; /* 初めは透明に設定 */
   transform: translateY(100%); /* 下からスライドするために位置を下に設定 */
   animation: fadeInFromBottom 2s forwards; /* フェードインアニメーションの設定 */
-  animation-delay: 6s;
+  animation-delay: 4s;
 }
 
 @keyframes fadeInFromBottom {
@@ -518,12 +519,14 @@ animation: typing 5s steps(17, end), caret .5s step-end infinite;
   }
 }
 
-.button-38 {
+.button-38 button{
+
     display: flex;
     justify-content: center;
     align-items: center;
     width: 250px;
-    margin: 400px auto;
+    margin: 0 auto;
+    margin-top:570px;
     padding: .9em 2em;
     border: none;
     border-radius: 5px;
@@ -531,9 +534,34 @@ animation: typing 5s steps(17, end), caret .5s step-end infinite;
     color: #fff;
     font-weight: 600;
     font-size: 1em;
+    position:relative;
+
+}
+.button-38 button::after {
+    content: ''; /* 擬似要素のコンテンツを空にする */
+    /* ボーダーを完全に削除 */
+    border-top: none;
+    border-right: none;
+    /* 以下は元々のスタイル */
+    width: 5px;
+    height: 5px;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+
+}
+.button-38 a{
+	text-decoration:none;
 }
 
-.button-38:hover {
+.button-38 button:hover::after {
+    border-color: transparent; /* ホバー時の色を透明に設定 */
+}
+
+.button-38 button:hover {
     animation: anime-button-38 .3s linear infinite;
 }
 
@@ -553,14 +581,14 @@ animation: typing 5s steps(17, end), caret .5s step-end infinite;
 }
 
 .confetti {
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100%;
-	top:0;
+	top:20px;
 }
 
 .confetti span {
-	position: absolute;
+	position: fixed;
 	top: -10%;
 	left: 0;
 	width: 1.5vw;

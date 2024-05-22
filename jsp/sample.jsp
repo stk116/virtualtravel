@@ -19,7 +19,12 @@
 
             /* 背景画像の位置を設定 */
             background-position: center; /* 画像を中央に配置 */
+
+
         }
+        html{overflow:hidden;}
+
+
     </style>
 </head>
 
