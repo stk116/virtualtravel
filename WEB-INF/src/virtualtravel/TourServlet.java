@@ -33,9 +33,9 @@ public class TourServlet extends HttpServlet{
 
 
 
-				if(arr.size() == 12) {
-					arr.clear();
-				}
+		/*if(arr.size() == 12) {
+			arr.clear();
+		}*/
 				int r = 0;
 
 				r = DBManagerT.Random();

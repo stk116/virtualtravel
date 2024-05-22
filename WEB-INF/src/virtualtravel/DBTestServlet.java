@@ -1,6 +1,7 @@
 package virtualtravel;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,6 +16,11 @@ public class DBTestServlet extends HttpServlet{
                 String username =(String) session.getAttribute("username");
                 String forwardURL = null;
                 String tour=null;
+
+		 @SuppressWarnings("unchecked")
+		 ArrayList<Integer> arr = (ArrayList<Integer>) session.getAttribute("ArrayList");
+
+
                 try {
                     request.setAttribute("username", username);
                     tour=DBManagerT.complexSearch((Integer) session.getAttribute("r"));
@@ -22,7 +28,12 @@ public class DBTestServlet extends HttpServlet{
                     if(result <1) {
                         forwardURL = "/jsp/title.jsp";
                     }else {
+                    	if(arr.size() == 12) {
+                    		arr.clear();
+                    		forwardURL = "/jsp/sample.jsp";
+                    	}else {
                         forwardURL = "/jsp/tournoowari.jsp";
+                    	}
                     }
                     }catch (SQLException e) {
                         e.printStackTrace();
