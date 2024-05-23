@@ -109,6 +109,13 @@ transition: all 0.5s;
  font-size:40px;
  z-index:5;
  }
+.medal{
+ color:yellow;
+ background-color:white;
+ border:1px solid grey;
+ border-radius: 3px;
+ padding: 2px;
+ }
  .HIScontent{
     font-family:"monospace";
     position:fixed;

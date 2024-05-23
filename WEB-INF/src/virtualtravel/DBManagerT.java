@@ -146,4 +146,77 @@ public static int insert(String username ,String tour) throws SQLException{
         }
     }
     }
+
+public static int setC(String username) throws SQLException{
+    Connection con = null;
+    Statement smt = null;
+    String sql = "UPDATE T_USER SET STATUS = 1 WHERE USERNAME = '" + username + "'";
+
+    try {
+    	con = getConnection();
+        smt = con.createStatement();
+        return smt.executeUpdate(sql);
+    }finally {
+        if (smt != null) {
+            try {
+                smt.close();
+            }catch(SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if (con != null) {
+            try {
+                con.close();
+            }catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    }
+
+public static int getC(String username) throws SQLException{
+	Connection con = null;
+    Statement smt = null;
+    ResultSet rs = null;
+    int c = 0;
+
+    String sql= "SELECT STATUS FROM T_USER WHERE USERNAME = '" + username + "'";
+
+
+    try {
+        con = getConnection();
+        smt = con.createStatement();
+        rs = smt.executeQuery(sql);
+
+	while(rs.next()) {
+	c = rs.getInt("status");
+	}
+	}finally {
+		if (rs != null) {
+			try {
+			rs.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}
+		}
+		if (smt != null) {
+			try {
+				smt.close();
+			}catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		if (con != null) {
+			try {
+				con.close();
+			}catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	return c;
 }
+
+}
+

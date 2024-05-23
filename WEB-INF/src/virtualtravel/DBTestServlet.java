@@ -20,6 +20,11 @@ public class DBTestServlet extends HttpServlet{
 		 @SuppressWarnings("unchecked")
 		 ArrayList<Integer> arr = (ArrayList<Integer>) session.getAttribute("ArrayList");
 
+			if (arr == null) {
+			    arr = new ArrayList<Integer>();
+			    session.setAttribute("ArrayList", arr);
+			}
+
 
                 try {
                     request.setAttribute("username", username);
@@ -29,10 +34,11 @@ public class DBTestServlet extends HttpServlet{
                         forwardURL = "/jsp/title.jsp";
                     }else {
                     	if(arr.size() == 12) {
+                    		DBManagerT.setC(username);
                     		arr.clear();
                     		forwardURL = "/jsp/sample.jsp";
                     	}else {
-                        forwardURL = "/jsp/tournoowari.jsp";
+                    		forwardURL = "/jsp/tournoowari.jsp";
                     	}
                     }
                     }catch (SQLException e) {

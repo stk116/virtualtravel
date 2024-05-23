@@ -22,11 +22,16 @@ public class FinalServlet extends HttpServlet{
 				List<String> dateList = null;
 
 				String forwardURL = null;
+				int status = 0;
 
 				HttpSession session = request.getSession();
 				String username = (String)session.getAttribute("username");
 
+
 				try {
+
+					status = DBManagerT.getC(username);
+					session.setAttribute("status", status);
 
 					DBManagerF.simpleUpdateDate();
 
