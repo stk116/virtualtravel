@@ -31,13 +31,10 @@ public class TourServlet extends HttpServlet{
 				    session.setAttribute("ArrayList", arr);
 				}
 
-
-
-		/*if(arr.size() == 12) {
-			arr.clear();
-		}*/
+				if(arr.size() == 12) {
+					arr.clear();
+				}
 				int r = 0;
-
 				r = DBManagerT.Random();
 				while(arr.contains(r)) {
 					r=DBManagerT.Random();

@@ -31,9 +31,21 @@
 	</div>
 </div>
 
+<%
+	int c = 0;
+	c = (int)session.getAttribute("status");
+%>
+
 	<div class="HISbg">
 	<div class="bigContent">
-	<p class="HIShistory"><b>—·‚Ì—š—ð</b></p>
+	<p class="HIShistory"><b>—·‚Ì—š—ð</b>
+	<% if(c == 1){ %>
+		<i class="fa-solid fa-medal medal" ></i></p>
+	<%
+	}
+	%>
+
+
 	<div class="HIScontent">
 	<form action="<%=request.getContextPath() %>/favorite" method="post" class="HISform">
 		<table class="HIStable" border="2" cellspacing="1" >

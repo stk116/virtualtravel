@@ -22,11 +22,16 @@ public class FinalServlet extends HttpServlet{
 				List<String> dateList = null;
 
 				String forwardURL = null;
+				int status = 0;
 
 				HttpSession session = request.getSession();
 				String username = (String)session.getAttribute("username");
 
+
 				try {
+
+					status = DBManagerT.getC(username);
+					session.setAttribute("status", status);
 
 					DBManagerF.simpleUpdateDate();
 
@@ -50,19 +55,15 @@ public class FinalServlet extends HttpServlet{
 					@SuppressWarnings("unchecked")
 					String tour = ((List<String>) session.getAttribute("hisList")).get(i);
 					try {
-						check = DBManagerF.FavoriteSearchFirst(tour,username);
-					} catch (SQLException e) {
-						e.printStackTrace();
-					}
-					if(check == null) {
-						try {
+
 							check = DBManagerF.FavoriteSearch(tour, username);
 						} catch (SQLException e) {
 							e.printStackTrace();
 						}
-					}
+
 					session.setAttribute("checkbox_value" + i, check);
 				}
+
 
 				if (forwardURL != null) {
 					request.setAttribute("hisList", hisList);
