@@ -153,7 +153,7 @@ public static int insert2(String username, String tour, String fav) throws SQLEx
 	Statement smt = null;
 
 	String sql = "insert into t_history (username,his,date,fav) values('"+ username + "','"+ tour
-			+ "',to_char(current_timestamp, 'YYYY-MM-DD HH24:MI'),'" + fav + "')";
+			+ "',to_char(current_timestamp, 'YYYY/MM/DD HH24:MI:SS'),'" + fav + "')";
 
 	try {
 		con = getConnection();
