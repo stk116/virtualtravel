@@ -7,6 +7,18 @@ body {
     text-align: center;
 }
 
+
+.photo-caption {
+	position: relative;
+}
+
+.photo-caption p {
+	position: absolute;
+	top:-5rem;
+	left:1rem;
+
+}
+
 .photo-container{
 	font-color:white;
 }
@@ -21,6 +33,36 @@ h1 {
     margin: 0;
 }
 */
+
+/* 画像を大きくするコード */
+
+.zoom-in-img {
+	width: 800px;
+	max-width: 1000px;
+	height: 500px;
+	margin-top: 5%;;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	background: black;
+	/* overflow: hidden;  */      /* はみ出す要素は非表示に */
+	cursor: pointer;         /* マウスが画面上にきたとき */
+	z-index: 50;
+}
+.zoom-in-img img {
+	width: 100%;
+	height: 100%;
+}
+.zoom-in-img img {
+	transform: scale(1);      /* 要素の拡大と縮小（通常時が１） */
+	transition: .3s ease-in-out;
+}
+.zoom-in-img:hover img {
+	transform: scale(1.5);    /* 要素の拡大と縮小（ホバー時は1.5） */
+}
+
+
+
 /*  次に進むボタン  */
 
 .button008 a {
@@ -85,7 +127,7 @@ h1 {
     background: #eee;
     position: absolute;
     top: 50%;
-    right: 5%;
+    right: 6.5em;
     transform: translate(50%, -50%);
     display: flex;
     justify-content: space-around;
@@ -126,7 +168,7 @@ h1 {
     background: #eee;
     position: absolute;
     top: 50%;
-    left: -3.5rem;
+    left: -3.2rem;
     height: 50px;
     width:  100px;
     transform: translate(50%, -50%);

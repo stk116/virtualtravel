@@ -12,11 +12,18 @@
 </head>
 <body bgcolor="black">
 
-<div class="photo-container">
+  <br>
+
+  <div class="photo-container">
     <div class="photo-caption">
-      <h2 style="text-align:left"><p style="color: white;">　<%=request.getAttribute("name") %></p> </h2> <!-- 名所 -->
-  	  <img src="<%=request.getAttribute("pic") %>" width="1150" height="600">
-   														<!-- 写真 -->
+
+      <div style="text-align:center" class="zoom-in">
+        <div class="zoom-in-img">
+
+          <img src= " <%=request.getAttribute("pic") %>">  <!-- 写真 -->
+          <h2 style="text-align:left"><p style="color: white;">　<%=request.getAttribute("name") %></p></h2>	<!-- 名所 -->
+        </div>
+      </div>
     </div>
 
     <div class="button008">
@@ -25,7 +32,7 @@
 
 
     <div class="button009">
-	<a href="<%=request.getContextPath() %>/screen2">前の場所へ</a>  <!-- ページ遷移 ツアー２-->
+	    <a href="<%=request.getContextPath() %>/screen2">前の場所へ</a>  <!-- ページ遷移 ツアー２-->
 	</div>
 
     <p style="color: white;"> <%=request.getAttribute("place") %> </p> <!-- 住所 -->

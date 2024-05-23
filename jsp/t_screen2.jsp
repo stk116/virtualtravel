@@ -12,27 +12,32 @@
 
 <body bgcolor="black">
 
-	<div class="photo-container">
-    	<div class="photo-caption">
-			<h2 style="text-align:left"><p style="color: white;">　<%=request.getAttribute("name") %></p></h2> <!-- 名所 -->
+  <br>
 
-			<img src= " <%=request.getAttribute("pic") %>"  width="1150" height="600">  <!-- 写真 -->
+  <div class="photo-container">
+    <div class="photo-caption">
 
+      <div style="text-align:center" class="zoom-in">
+        <div class="zoom-in-img">
 
-		<div class="button008">
-			<a href="<%=request.getContextPath() %>/screen3">次の場所へ</a>  <!-- ページ遷移 ツアー３ -->
-		</div>
-	   </div>
-    <div class="button009">
-	<a href="<%=request.getContextPath() %>/screen1">前の場所へ</a>  <!-- ページ遷移 ツアー1-->
+          <img src= " <%=request.getAttribute("pic") %>">  <!-- 写真 -->
+          <h2 style="text-align:left"><p style="color: white;">　<%=request.getAttribute("name") %></p></h2>	<!-- 名所 -->
+        </div>
+      </div>
+    </div>
+	<div class="button008">
+		<a href="<%=request.getContextPath() %>/screen3">次の場所へ</a>  <!-- ページ遷移 ツアー３ -->
 	</div>
+  </div>
+  <div class="button009">
+	<a href="<%=request.getContextPath() %>/screen1">前の場所へ</a>  <!-- ページ遷移 ツアー1-->
+  </div>
 
     <p style="color: white;"> <%=request.getAttribute("place") %> </p> <!-- 住所 -->
     <p style="color: white;">  <%=request.getAttribute("text") %> </p>  <!-- 説明 -->
 
     <p style="color: white;">参照先： <%=request.getAttribute("link") %> </p> <!-- 参照 -->
 
-    </div>
 
 </body>
 </html>
