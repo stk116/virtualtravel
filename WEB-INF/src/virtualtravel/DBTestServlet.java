@@ -16,6 +16,7 @@ public class DBTestServlet extends HttpServlet{
                 String username =(String) session.getAttribute("username");
                 String forwardURL = null;
                 String tour=null;
+                String fav = null;
 
 		 @SuppressWarnings("unchecked")
 		 ArrayList<Integer> arr = (ArrayList<Integer>) session.getAttribute("ArrayList");
@@ -29,6 +30,8 @@ public class DBTestServlet extends HttpServlet{
                 try {
                     request.setAttribute("username", username);
                     tour=DBManagerT.complexSearch((Integer) session.getAttribute("r"));
+                    fav = DBManagerF.FavoriteSearch(tour, username);
+                    if (fav == null) {
                     int result=DBManagerT.insert(username,tour);
                     if(result <1) {
                         forwardURL = "/jsp/title.jsp";
@@ -40,8 +43,20 @@ public class DBTestServlet extends HttpServlet{
                     	}else {
                     		forwardURL = "/jsp/tournoowari.jsp";
                     	}
+                    }}else {
+                    	int result=DBManagerT.insert2(username,tour,fav);
+                        if(result <1) {
+                            forwardURL = "/jsp/title.jsp";
+                        }else {
+                        	if(arr.size() == 12) {
+                        		DBManagerT.setC(username);
+                        		arr.clear();
+                        		forwardURL = "/jsp/sample.jsp";
+                        	}else {
+                        		forwardURL = "/jsp/tournoowari.jsp";
+                        	}
                     }
-                    }catch (SQLException e) {
+                    }}catch (SQLException e) {
                         e.printStackTrace();
                     }
                     if (forwardURL != null) {

@@ -55,19 +55,15 @@ public class FinalServlet extends HttpServlet{
 					@SuppressWarnings("unchecked")
 					String tour = ((List<String>) session.getAttribute("hisList")).get(i);
 					try {
-						check = DBManagerF.FavoriteSearchFirst(tour,username);
-					} catch (SQLException e) {
-						e.printStackTrace();
-					}
-					if(check == null) {
-						try {
+
 							check = DBManagerF.FavoriteSearch(tour, username);
 						} catch (SQLException e) {
 							e.printStackTrace();
 						}
-					}
+
 					session.setAttribute("checkbox_value" + i, check);
 				}
+
 
 				if (forwardURL != null) {
 					request.setAttribute("hisList", hisList);

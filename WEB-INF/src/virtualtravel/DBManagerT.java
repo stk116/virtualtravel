@@ -147,6 +147,36 @@ public static int insert(String username ,String tour) throws SQLException{
     }
     }
 
+public static int insert2(String username, String tour, String fav) throws SQLException{
+
+	Connection con = null;
+	Statement smt = null;
+
+	String sql = "insert into t_history (username,his,date,fav) values('"+ username + "','"+ tour
+			+ "',to_char(current_timestamp, 'YYYY-MM-DD HH24:MI'),'" + fav + "')";
+
+	try {
+		con = getConnection();
+		smt = con.createStatement();
+		return smt.executeUpdate(sql);
+	}finally {
+		if (smt != null) {
+			try {
+				smt.close();
+			}catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		if (con != null) {
+			try {
+				con.close();
+			}catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
 public static int setC(String username) throws SQLException{
     Connection con = null;
     Statement smt = null;
