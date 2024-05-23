@@ -22,7 +22,11 @@ public class RegistServlet extends HttpServlet{
 			}else if(pass.contains(" ")) {
 				request.setAttribute("errorMessageLog", "スペースをパスワードに使用できません");
 				forwardURL = "/jsp/registerror.jsp";
+			}else if(username.length() < 1) {
+				request.setAttribute("errorMessageLog", "ユーザー名を入力してください");
+				forwardURL = "/jsp/registerror.jsp";
 			}else {
+
 			try {
 				TravelerBeanIL tbean = new TravelerBeanIL(username, pass);
 				int updateCount = TravelerDAOIL.insert(tbean);

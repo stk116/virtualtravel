@@ -24,7 +24,7 @@
 
 		<ul>
 		  <li>
-				<li><a href="<%=request.getContextPath() %>/tour">スタートページ</a></li>
+				<li><a href="<%=request.getContextPath() %>/tour">ツアー開始！</a></li>
 				<li><a href="<%=request.getContextPath() %>/sessioninvalidate">ログアウト</a></li>
 		  </li>
 		</ul>
