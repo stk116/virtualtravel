@@ -6,6 +6,23 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-31J">
 	<title>タイトル画面</title>
 		<link rel="stylesheet" href="<%=request.getContextPath() %>/css/title.css">
+
+		<script type="text/javascript">
+
+		window.onbeforeunload = function() {
+		};
+		window.onunload = function() {
+		};
+		  window.onload = function() {
+			    history.pushState(null, null, "/jsp/title.jsp");
+			    window.addEventListener('popstate', function () {
+			      history.pushState(null, null, "/jsp/title.jsp");
+			      window.location.href = "/jsp/title.jsp";
+			    });
+			  }
+		</script>
+
+
 </head>
 <body class="titleBody">
 <div class="titleBG">

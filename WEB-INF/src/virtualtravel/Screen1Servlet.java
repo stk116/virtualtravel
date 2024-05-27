@@ -56,7 +56,7 @@ public class Screen1Servlet extends HttpServlet{
 		        } else {
 		            // forwardURLがNullの場合にエラー処理を行う
 		            // 例えばエラーページにリダイレクトするなど
-		            response.sendRedirect("/title.jsp");
+		            response.sendRedirect("/404.html");
 		        }
 
 

@@ -9,6 +9,22 @@
 	<title>ツアー継続・終了画面</title>
 
 	<link rel="stylesheet" href="<%=request.getContextPath() %>/css/botanno.css">
+
+			<script type="text/javascript">
+
+		window.onbeforeunload = function() {
+		};
+		window.onunload = function() {
+		};
+		  window.onload = function() {
+			    history.pushState(null, null, "/virtualtravel/404.html");
+			    window.addEventListener('popstate', function () {
+			      history.pushState(null, null, "/virtualtravel/404.html");
+			      window.location.href = "/jsp/title.jsp";
+			    });
+			  }
+		</script>
+
 </head>
 
 <body>

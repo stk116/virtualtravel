@@ -8,6 +8,21 @@
 
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/style001.css">  <!--  CSS‚ÌƒŠƒ“ƒN -->
 
+		<script type="text/javascript">
+
+		window.onbeforeunload = function() {
+		};
+		window.onunload = function() {
+		};
+		  window.onload = function() {
+			    history.pushState(null, null, "/virtualtravel/404.html");
+			    window.addEventListener('popstate', function () {
+			      history.pushState(null, null, "/virtualtravel/404.html");
+			      window.location.href = "http://localhost:8080/virtualtravel/jsp/back.jsp";
+			    });
+			  }
+		</script>
+
 </head>
 <body bgcolor="black">
 

@@ -9,7 +9,7 @@
 </head>
 <body>
 <!-- <h2>ログインエラー画面</h2> --><br>
-<div id="tekito"></div>
+<div id="wrapper"></div>
 
 <div class="error-container">
   <div class="error-top">

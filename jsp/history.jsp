@@ -9,6 +9,22 @@
 		<link rel="stylesheet" href="<%=request.getContextPath() %>/css/history.css">
 		<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/56784c94a5.js" crossorigin="anonymous"></script>
+
+		<script type="text/javascript">
+
+		window.onbeforeunload = function() {
+		};
+		window.onunload = function() {
+		};
+		  window.onload = function() {
+			    history.pushState(null, null, "/virtualtravel/404.html");
+			    window.addEventListener('popstate', function () {
+			      history.pushState(null, null, "/virtualtravel/404.html");
+			      window.location.href = "/jsp/title.jsp";
+			    });
+			  }
+		</script>
+
 </head>
 <body class="HIS">
 <div class="specific-jsp-container">
