@@ -5,17 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-31j">
 <title>新規会員登録画面</title>
-<script>
+		<script type="text/javascript">
 
-window.onload = function() {
-    history.pushState(null, null, null);
-    window.addEventListener('popstate', function () {
-        history.pushState(null, null, null);
-        window.alert('前のページに戻る場合は、「戻る」ボタンから戻ってください。');
-    });
-};
+		window.onload = function() {
+		    history.pushState(null, null, null);
+		    window.addEventListener('popstate', function () {
+		        history.pushState(null, null, null);
+		        window.alert('ブラウザバックを使用せずに戻るボタンを使用してください');
+		    });
+		};
 
-</script>
+		</script>
 </head>
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/Signupteststyle.css">
 <body>

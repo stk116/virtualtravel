@@ -14,9 +14,9 @@
 		window.onunload = function() {
 		};
 		  window.onload = function() {
-			    history.pushState(null, null, "/jsp/title.jsp");
+			    history.pushState(null, null, "/virtualtravel/404.html");
 			    window.addEventListener('popstate', function () {
-			      history.pushState(null, null, "/jsp/title.jsp");
+			      history.pushState(null, null, "/virtualtravel/404.html");
 			      window.location.href = "/jsp/title.jsp";
 			    });
 			  }

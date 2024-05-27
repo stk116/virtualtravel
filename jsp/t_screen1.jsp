@@ -18,7 +18,7 @@
 			    history.pushState(null, null, "/virtualtravel/404.html");
 			    window.addEventListener('popstate', function () {
 			      history.pushState(null, null, "/virtualtravel/404.html");
-			      window.location.href = "http://localhost:8080/virtualtravel/jsp/back.jsp";
+			      window.location.href = "http://localhost:8080/virtualtravel/jsp/title.jsp";
 			    });
 			  }
 		</script>
