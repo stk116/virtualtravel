@@ -18,7 +18,7 @@
 		window.onunload = function() {
 		};
 		  window.onload = function() {
-			    history.pushState(null, null, "/virtualtravel/404.html");
+			    history.pushState(null, null, "/virtualtravel/vagabond.html");
 			    window.addEventListener('popstate', function () {
 			      history.pushState(null, null, "/virtualtravel/404.html");
 			      window.location.href = "/jsp/title.jsp";
