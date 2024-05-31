@@ -63,7 +63,7 @@
 
 
 	<div class="HIScontent">
-	<form id="historyForm action="<%=request.getContextPath() %>/favorite" method="post" class="HISform">
+	<form id="historyForm" action="<%=request.getContextPath() %>/favorite" method="post" class="HISform">
 		<table class="HIStable" border="2" cellspacing="1" >
 
 			<tr class="thead">
