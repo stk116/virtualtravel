@@ -23,6 +23,9 @@ public class FavoriteServlet extends HttpServlet{
 
 			List<String> hisList = new ArrayList<String>();
 			hisList = (List<String>) session.getAttribute("hisList");
+			@SuppressWarnings("unused")
+			List<String> dateList = new ArrayList<String>();
+			dateList = (List<String>) session.getAttribute("dateList");
 			//hisList = (List<String>)request.getAttribute("hisList");
 			String username = (String)session.getAttribute("username");
 
@@ -35,16 +38,18 @@ public class FavoriteServlet extends HttpServlet{
 			    if(checkboxValue != null &&checkboxValue.equals("checked")) {
 			    	try {
 			    		String tour = ((List<String>) session.getAttribute("hisList")).get(i);
+			    		String date = ((List<String>) session.getAttribute("dateList")).get(i);
 			    		//System.out.println(tour);
-						DBManagerF.simpleUpdateFav(checkboxValue, tour, username);
+						DBManagerF.simpleUpdateFav(checkboxValue, tour, username,date);
 					} catch (SQLException e) {
 						e.printStackTrace();
 					}
 			    }else {
 			    	try {
 			    		String tour = ((List<String>) session.getAttribute("hisList")).get(i);
+			    		String date = ((List<String>) session.getAttribute("dateList")).get(i);
 			    		//System.out.println(tour);
-						DBManagerF.simpleUpdateNull(tour, username);
+						DBManagerF.simpleUpdateNull(tour, username,date);
 					} catch (SQLException e) {
 						e.printStackTrace();
 					}
@@ -55,8 +60,9 @@ public class FavoriteServlet extends HttpServlet{
 			for (int i = hisList.size()-1; i >= 0; i--) {
 				String check = null;
 				String tour = ((List<String>) session.getAttribute("hisList")).get(i);
+				String date = ((List<String>) session.getAttribute("dateList")).get(i);
 				try {
-					check = DBManagerF.FavoriteSearch(tour,username);
+					check = DBManagerF.FavoriteSearchDate(tour,username,date);
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}

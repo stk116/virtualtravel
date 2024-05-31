@@ -105,6 +105,19 @@
 	</div>
 	</div>
 
+	<script>
+	document.addEventListener("DOMContentLoaded", function() {
+	    var checkboxes = document.querySelectorAll("input[type='checkbox'][id^='star_']");
+	    checkboxes.forEach(function(checkbox) {
+	        checkbox.addEventListener("change", function() {
+	        	document.getElementById("historyForm").submit();
+
+	        });
+	    });
+	});
+
+	</script>
+
 
 
 </body>

@@ -54,9 +54,11 @@ public class FinalServlet extends HttpServlet{
 					String check = null;
 					@SuppressWarnings("unchecked")
 					String tour = ((List<String>) session.getAttribute("hisList")).get(i);
+					@SuppressWarnings("unchecked")
+					String date = ((List<String>) session.getAttribute("dateList")).get(i);
 					try {
 
-							check = DBManagerF.FavoriteSearch(tour, username);
+							check = DBManagerF.FavoriteSearchDate(tour, username,date);
 						} catch (SQLException e) {
 							e.printStackTrace();
 						}

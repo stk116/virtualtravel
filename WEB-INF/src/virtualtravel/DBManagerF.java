@@ -125,13 +125,14 @@ public class DBManagerF {
 
 	}
 
-	public static void simpleUpdateFav(String  checked, String tour, String username) throws SQLException{
+	public static void simpleUpdateFav(String  checked, String tour, String username, String date) throws SQLException{
 
 		Connection con = null;
 		Statement smt = null;
 
 
-		String sql = "update t_history set fav='" + checked + "' where username ='" + username + "' and his='" + tour + "'";
+		String sql = "update t_history set fav='" + checked + "' where username ='" + username
+				+ "' and his='" + tour + "' and date='" + date + "'";
 
 
 		try {
@@ -157,13 +158,14 @@ public class DBManagerF {
 		}
 	}
 
-	public static void simpleUpdateNull(String tour, String username) throws SQLException{
+	public static void simpleUpdateNull(String tour, String username, String date) throws SQLException{
 
 		Connection con = null;
 		Statement smt = null;
 
 
-		String sql = "update t_history set fav='null' where username = '" + username + "' and his='" + tour + "'";
+		String sql = "update t_history set fav='null' where username = '" + username + "' and his='"
+		+ tour + "' and date='" + date + "'";
 
 
 		try {
@@ -231,6 +233,52 @@ public class DBManagerF {
 
 		String sql = "SELECT FAV FROM T_HISTORY WHERE USERNAME='" + username + "' and HIS='" + tour +
 				"' order by date desc limit 1";
+
+		try {
+			con = getConnection();
+			smt = con.createStatement();
+			rs = smt.executeQuery(sql);
+
+			while(rs.next()) {
+			favorite = rs.getString("fav");
+			}
+		}finally {
+			if (rs != null) {
+				try {
+				rs.close();
+				}catch(SQLException e){
+					e.printStackTrace();
+				}
+			}
+			if (smt != null) {
+				try {
+					smt.close();
+				}catch(SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				}catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return favorite;
+	}
+
+	public static String FavoriteSearchDate(String tour, String username, String date) throws SQLException{
+
+		Connection con = null;
+		Statement smt = null;
+		ResultSet rs = null;
+		String favorite = null;
+
+
+		String sql = "SELECT FAV FROM T_HISTORY WHERE USERNAME='" + username + "' and HIS='" + tour +
+				"' and date='" + date +"'";
 
 		try {
 			con = getConnection();
